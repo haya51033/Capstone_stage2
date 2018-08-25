@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ChargeCredit"
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="@string/chargeNewCredit" />
+        <item
+            android:id="@+id/nav_ChangePassword"
+            android:icon="@android:drawable/ic_partial_secure"
+            android:title="@string/change_password" />
+        <item
+            android:id="@+id/nav_UpdateUserInfo"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="@string/update_your_info" />
+        <item
+            android:id="@+id/nav_SendMessage"
+            android:icon="@android:drawable/ic_menu_send"
+            android:title="@string/ContactUs" />
+        <item
+            android:id="@+id/nav_ChangeLanguage"
+            android:icon="@android:drawable/ic_menu_info_details"
+            android:title="@string/change_app_language" />
+
+
+    </group>
+
+    <item android:title="@string/action_settings">
+        <menu>
+            <item
+                android:id="@+id/nav_LogOut"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="@string/LogOut" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/Share" />
+        </menu>
+    </item>
+
+</menu>

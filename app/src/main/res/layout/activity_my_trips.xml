@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.travelandtourism.Activities.MyTripsActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_weight="0"
+        android:background="@drawable/log7"/>
+    <Button
+        android:id="@+id/button_Hotel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@drawable/hotel_icon"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/my_hotel_reservations" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+    <Button
+        android:id="@+id/button_Flight3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@drawable/fly"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/my_flight_reservations" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+</LinearLayout>

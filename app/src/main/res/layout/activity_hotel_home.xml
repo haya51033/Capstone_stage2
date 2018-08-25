@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="0"
+        android:background="@drawable/hotel1"/>
+
+    <Button
+        android:id="@+id/button_Hotel1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@drawable/hotelicon"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/search_for_hotel" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+    <Button
+        android:id="@+id/button_Hotel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@drawable/hotel_icon"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/my_hotel_reservations" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+
+
+</LinearLayout>

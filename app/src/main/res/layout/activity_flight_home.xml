@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_weight="0"
+        android:background="@drawable/flightpic1"/>
+
+    <Button
+        android:id="@+id/button_Flight1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/fly"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/search_for_flight" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+    <Button
+        android:id="@+id/button_Flight2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/fly"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/get_flight_schedule" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+
+</LinearLayout>

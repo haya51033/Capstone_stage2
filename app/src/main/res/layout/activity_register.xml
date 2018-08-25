@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f1f1f2"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/Flayout"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/register_pic"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7000"
+        android:textColor="#fff"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="@string/registration"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+</LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Flayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/first_name"
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#6685c6"
+                android:textStyle="bold"
+                android:id="@+id/tv1"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tvRFN"
+                android:background="@drawable/stroke"
+                android:padding="8dp"
+                android:contentDescription="set first name"/>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/last_name"
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#6685c6"
+                android:textStyle="bold"
+                android:id="@+id/tv2"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:id="@+id/tvRLN"
+                android:contentDescription="set last name"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/gender"
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textColor="#6685c6"
+                android:textStyle="bold"
+                android:id="@+id/tv3"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:id="@+id/tvRGender"
+                android:contentDescription="set Gender"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:id="@+id/tv4"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:background="@drawable/stroke"
+                android:padding="8dp"
+                android:id="@+id/tvREmail"
+                android:contentDescription="set e-mail"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number"
+                android:textSize="10sp"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textColor="#6685c6"
+                android:id="@+id/tv5"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:ems="10"
+                android:id="@+id/tvRPhone"
+                android:contentDescription="set phone"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:id="@+id/tv6"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:id="@+id/tvRCountry"
+                android:contentDescription="set country"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:id="@+id/tv7"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tvRCity"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:contentDescription="set city"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:id="@+id/tv8"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tvRUsername"
+                android:background="@drawable/stroke"
+                android:padding="8dp"
+                android:contentDescription="set username"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:id="@+id/tv9"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tvRPassword"
+                android:contentDescription="set password"
+                android:padding="8dp"
+                android:background="@drawable/stroke"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_password"
+                android:textSize="10sp"
+                android:textColor="#6685c6"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:id="@+id/tv10"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/tvRConfPassword"
+                android:padding="8dp"
+                android:background="@drawable/stroke"
+                android:contentDescription="set confirm password"/>
+
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="22dp"
+                android:background="#01579B"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:onClick="buttonOnClick1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+    </ScrollView>

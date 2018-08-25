@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/flightpic2"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/tvBookFromCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from_city"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from_hour"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBookFromHour"
+                android:textStyle="bold"
+                />
+
+
+            <CheckBox
+                android:id="@+id/checkbox_economy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onCheckboxClicked"
+                android:padding="10dp"
+                android:text="@string/Economy"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#4ea44b"
+                android:buttonTint="@color/theme_accent"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EconomyPrice"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBookEconomyPrice"
+                android:textColor="#4ea44b"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Economy_seat"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBookEconomySeatNum"
+                android:visibility="gone"
+                android:textColor="#fa0000"
+                android:textStyle="bold"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/tvBookToCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to_city"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/flight_duration"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBookFlightDuration"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_business"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableBottom="@android:color/black"
+                android:onClick="onCheckboxClicked"
+                android:padding="10dp"
+                android:text="@string/business"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/theme_primary_dark"
+                android:buttonTint="@color/theme_accent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BusinessPrice"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBookBusinessPrice"
+                android:textColor="#3f4a86"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Adult"
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvAdultNum"/>
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/array_adult"
+                    android:layout_weight="0.5"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AirLine_name"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/tvBookAirlineNma"
+        android:background="#99491d3d"
+        />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Totalcost"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/tvBookTotalCost"
+        android:textColor="#ff0000"
+        android:textStyle="bold"
+        android:visibility="gone"
+        />
+    <Button xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/button_submitFBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:text="@string/submitt_booking"
+        android:textColor="#fff"
+        android:background="#01579B"
+        android:onClick="button_submitFBook"
+
+        />
+
+</LinearLayout>

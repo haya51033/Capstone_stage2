@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Color Palette-->
+    <color name="photo_placeholder">#b1c9b6</color>
+    <color name="material_grey">#808284</color>
+    <color name="theme_primary">#064789</color>
+    <color name="theme_primary_dark">#3A405A</color>
+    <color name="theme_accent">#F05E23</color>
+    <color name="theme_accent_alternate">#cf7139</color>
+    <color name="white">@android:color/white</color>
+    <color name="text_color">#000000</color>
+    <color name="button_background">#01579B</color>
+    <color name="layout_background">#e7e7e8</color>
+
+</resources>

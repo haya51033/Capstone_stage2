@@ -1,0 +1,334 @@
+<resources>
+
+    <string name="app_name">DSH للسياحة</string>
+    <string name="prompt_email">البريد الالكتروني</string>
+    <string name="prompt_password">كلمة السر </string>
+    <string name="registration_button">تسجيل حساب جديد</string>
+    <string name="action_sign_in">تسجيل دخول</string>
+    <string name="action_sign_in_short">تسجيل دخول</string>
+    <string name="error_invalid_email">البريد الالكتروني المدخل غير صحيح</string>
+    <string name="error_invalid_password">كلمة السر قصيرة جدا!</string>
+    <string name="error_incorrect_password">كلمة السر خاطئة!</string>
+    <string name="error_field_required">هذا الحقل مطلوب</string>
+    <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
+    <string name="no_text"> </string>
+    <string name="registration_message">You are not registered yet. Use the registration button to complete your registration.</string>
+    <string name="registration_failed">Your email or password is already in use</string>
+    <string name="search">Search&#8230;</string>
+    <string name="Done_item">Done</string>
+
+    <!--LABELS ///////////////-->
+    <string name="home">الرئيسية</string>
+    <string name="countries">البلدان</string>
+    <string name="HotelRooms">غرف الفندق</string>
+    <string name="bookRoom">حجز غرفة</string>
+    <string name="BookFlight">حجز رحلة طيران</string>
+    <string name="myFlightReservations">حجوزاتي الجوية</string>
+    <string name="HotelHome">الفنادق</string>
+    <string name="MyAccount">حسابي</string>
+    <string name="OfferInfo">تفاصيل العرض السياحي</string>
+    <string name="bookOffer">حجز العرض السياحي</string>
+    <string name="OffersHome">العروض السياحية</string>
+    <string name="GetStart">لنبدأ</string>
+
+
+
+    <string-array name="array_adult">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="array_Card">
+        <item>فيزا</item>
+        <item>ماستر كارد</item>
+        <item>أميريكان اكسبريس</item>
+        <item>Discover Network</item>
+    </string-array>
+    <string-array name="array_Month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="array_Year">
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+    </string-array>
+    <string name="title_activity_side_menu">SideMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_AboutUs">AboutUs</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <!--preferance-->
+    <string name="pref_lang_label">اختر لغتك</string>
+    <string name="pref_language_key" translatable="false">اللغة</string>
+    <string name="pref_lang_true">اللغة الانكليزية</string>
+    <string name="pref_lang_false">اللغة العربية</string>
+
+
+    <!--activity_book_flight-->
+
+    <string name="from_city">مدينة الانطلاق: </string>
+    <string name="from_hour">ساعة الاقلاع: </string>
+    <string name="Economy">الدرجة الاقتصادية: </string>
+    <string name="EconomyPrice">سعر الدرجة الاقتصادية: </string>
+    <string name="Economy_seat">مقعد الدرجة الاقتصادية: </string>
+    <string name="to_city">مدينة الوصول: </string>
+    <string name="flight_duration">مدة الرحلة: </string>
+    <string name="business">درجة الأعمال: </string>
+    <string name="BusinessPrice">سعر درجة الأعمال: </string>
+    <string name="Adult">بالغين: </string>
+    <string name="AirLine_name">اسم شركة الطيران: </string>
+    <string name="Totalcost">السعر الإجمالي: </string>
+    <string name="submitt_booking">تأكيد الحجز: </string>
+
+    <!--activity_book_hotel-->
+    <string name="choose_duration">إختر المدة</string>
+    <string name="check_in">تاريخ الدخول</string>
+    <string name="check_out">تاريخ المغادرة</string>
+    <string name="Continue">استمرار</string>
+
+    <!--activity_change_password-->
+    <string name="current_password">كلمة السر الحالية: </string>
+    <string name="new_password">كلمة السر الجديدة: </string>
+    <string name="confirm_password">تأكيد كلمة السر: </string>
+    <string name="change_password">تغيير كلمة السر</string>
+
+    <!--activity_charge_credit-->
+    <string name="card_type">نوع البطاقة: </string>
+    <string name="name_on_Card">اسم حامل البطاقة: </string>
+    <string name="card_number">رقم البطاقة: </string>
+    <string name="cvc">الرقم السري: </string>
+    <string name="expierd_date">تاريخ انتهاء البطاقة: </string>
+    <string name="new_credit">المبلغ الجديد: </string>
+    <string name="submit_charge">تأكيد: </string>
+
+    <!--activity_city_info-->
+    <string name="EngName">اسم المدينة باللغة الانكليزية: </string>
+    <string name="ViewHotels">عرض الفنادق: </string>
+
+    <!--activity_country-->
+    <string name="choose_your_destination">إختر وجهتك: </string>
+
+    <!--activity_country_info-->
+
+    <!--activity_flight_home-->
+    <string name="search_for_flight">إبحث عن الرحلة </string>
+    <string name="get_flight_schedule">أوجد جدول الرحلات </string>
+
+    <!--activity_flight_schedule-->
+    <string name="from">مدينة الانطلاق</string>
+    <string name="select_from_city">اختر مدينة الانطلاق</string>
+    <string name="to">مدينة الوجهة</string>
+    <string name="select_to_city">اختر مدينة الوجهة</string>
+    <string name="get_Schedule">جلب جدول الرحلات</string>
+
+    <!--activity_forget_password-->
+    <string name="msg1">ادخل بريدك الالكتروني لارسالة كلمة السر الجديده اليه: </string>
+    <string name="reset_password">اعادة تعيين كلمة السر</string>
+
+    <!--activity_home-->
+    <string name="flights">الرحلات الجوية</string>
+    <string name="Hotels">الفنادق</string>
+    <string name="Tourism_Offers">العروض السياحية</string>
+    <string name="my_reservations">حجوزاتي</string>
+    <string name="my_account">حسابي</string>
+
+    <!--activity_hotel_home-->
+    <string name="search_for_hotel">ابحث عن فندق</string>
+    <string name="my_hotel_reservations">حجوزاتي الفندقية</string>
+
+    <!--activity_hotel_info-->
+    <string name="engName">الاسم باللغة الانكليزية: </string>
+    <string name="hotelStars">عدد النجوم: </string>
+    <string name="hotel_rating">تقييم الفندق: </string>
+    <string name="add_rate">اضف تقييمك: </string>
+    <string name="city_name">اسم المدينة: </string>
+    <string name="phone_number">رقم الهاتف: </string>
+    <string name="website">الموقع الالكتروني: </string>
+    <string name="email">البريد الالكتروني: </string>
+    <string name="check_for_hotel_room">ابحث عن غرفة: </string>
+    <string name="hotel_location">موقع الفندق</string>
+    <string name="call_hotel">اتصل بالفندق</string>
+
+
+    <!--activity_hotel_rooms-->
+    <string name="HotelName">اسم الفندق: </string>
+
+    <!--activity_login-->
+    <string name="login">سجل دخولك</string>
+    <string name="TO1">الى</string>
+    <string name="YOURACCOUNT">حسابك الشخصي</string>
+    <string name="username">اسم المستخدم</string>
+    <string name="set_user_name">ادخل اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="set_password">أدخل كلمة المرور</string>
+    <string name="forget_password">نسيت كلمة السر؟</string>
+    <!--activity_main-->
+    <string name="start">إبدأ</string>
+    <string name="sign_up">تسجيل جديد</string>
+
+
+    <!--activity_my_flight_reservations-->
+    <string name="my_flight_reservations">حجوزاتي الجوية</string>
+
+    <!--activity_my_offer_reservations-->
+    <string name="my_offer_reservations">حجوزاتي للعروض السياحية</string>
+
+    <!--activity_offer_home-->
+    <string name="get_all_offers">جميع العروض السياحية</string>
+    <string name="get_offers_options">خيارات العروض السياحية</string>
+
+    <!--activity_register-->
+    <string name="registration">التسجيل</string>
+    <string name="first_name">الاسم الأول:</string>
+    <string name="last_name">الكنية:</string>
+    <string name="gender">الجنس</string>
+    <string name="country">الدولة</string>
+    <string name="city">المدينة</string>
+    <string name="register">تسجيل</string>
+
+    <!--activity_search_flights-->
+    <string name="date">التاريخ</string>
+
+    <!--activity_search_offer-->
+    <string name="search_your_offer">ابحث عن عرضك</string>
+
+    <!--activity_send_message-->
+    <string name="send_message">ارسال رسالة</string>
+    <string name="enter_your_email">ادخل بريدك الالكتروني</string>
+    <string name="enter_your_email_subject">أدخل عنوان للرسالة</string>
+    <string name="enter_your_message">ادخل نص رسالتك</string>
+    <string name="send">ارسل</string>
+
+    <!--activity_update_userinfo-->
+    <string name="update_your_info">حديث بيانات المستخدم</string>
+
+    <!--flights_list-->
+    <string name="Filtered_flights">الرحلات المفلترة</string>
+
+    <!--nav_header_side_menu-->
+    <string name="welcome">أهلاً وسهلاً!</string>
+
+    <!--reserve_flight_confirmation-->
+    <string name="flight_reservation">حجز رحلة جوية</string>
+    <string name="flight_to">رحلة الى:</string>
+    <string name="reservation_number">رقم الحجز:</string>
+    <string name="time">التوقيت:</string>
+    <string name="flight_class">درجة الرحلة:</string>
+    <string name="flight_number">رقم الرحلة:</string>
+    <string name="passenger_name">اسم المسافر:</string>
+    <string name="passengers_counts">عدد المسافرين:</string>
+    <string name="reservation_cost">مبلغ الحجز</string>
+    <string name="reservation_date_and_time">تاريخ ووقت الحجز:</string>
+    <string name="cancel_reservation">الغاء الحجز</string>
+
+    <!--reserve_hotel_confermation-->
+    <string name="hotel_reservation">حجز فندق</string>
+    <string name="reference_number">رقم الحجز المرجعي:</string>
+    <string name="type">النوع:</string>
+    <string name="Guests_count">عدد النزلاء:</string>
+    <string name="Guest">الاسم:</string>
+
+    <!--reserve_offer-->
+    <string name="hotel">الفندق</string>
+    <string name="reserve_offer">احجز العرض</string>
+
+    <!--reserve_offer_confirmation-->
+    <string name="offer_reservation">حجز عرض سياحي</string>
+    <string name="duration">المدة:</string>
+    <string name="seat_number">عدد المقاعد:</string>
+
+
+    <!--row_flight-->
+    <string name="BusinessSeat">مقعد درجة الأعمال</string>
+
+    <string name="any_hotel_name">اسم فندق</string>
+
+    <!--row_offer-->
+    <string name="go_to">اذهب الى</string>
+    <string name="DestinationCity">المدينة الوجهة</string>
+
+    <!--row_room-->
+    <string name="HotelRoomName">اسم الغرفة:</string>
+    <string name="HotelRoomType">نوع الغرفة:</string>
+    <string name="room_price">اجرة الغرفة</string>
+    <string name="reserve">احجز</string>
+
+    <!--Schedule_flights_list-->
+    <string name="FlightsSchedule">جدول الرحلات</string>
+
+    <!--activity_side_menu_drawer-->
+    <string name="chargeNewCredit">اشحن رصيد جديد</string>
+    <string name="changePassword">تغيير كلمة المرور</string>
+    <string name="ContactUs">تواصل معنا</string>
+    <string name="change_app_language">تغيير اللغة</string>
+    <string name="LogOut">تسجيل الخروج</string>
+    <string name="Share">مشاركة</string>
+
+
+    <string name="at">في </string>
+    <string name="USD">$</string>
+
+
+    <string name="credit">الرصيد: </string>
+    <string name="offeredFor">مقدم لـ :</string>
+    <string name="day">  يوم</string>
+    <string name="people">شخص </string>
+
+    <string name="about_hotel">عن الفندق: </string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

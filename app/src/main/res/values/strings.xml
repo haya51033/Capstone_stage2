@@ -1,0 +1,337 @@
+<resources>
+    <string name="app_name">DSH Tourism</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password </string>
+    <string name="registration_button">Register</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">Contacts permissions are needed for providing email completions.</string>
+    <string name="no_text"> </string>
+    <string name="registration_message">You are not registered yet. Use the registration button to complete your registration.</string>
+    <string name="registration_failed">Your email or password is already in use</string>
+    <string name="search">Search&#8230;</string>
+    <string name="Done_item">Done</string>
+
+
+    <string-array name="array_adult">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <string-array name="array_Card">
+        <item>Visa</item>
+        <item>Master Card</item>
+        <item>American Express</item>
+        <item>Discover Network</item>
+    </string-array>
+    <string-array name="array_Month">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="array_Year">
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+    </string-array>
+    <string name="title_activity_side_menu">SideMenuActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_AboutUs">AboutUs</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+    <string name="action_settings">Settings</string>
+
+    <!--preferance-->
+    <string name="pref_lang_label">Select Lang</string>
+    <string name="pref_language_key" translatable="false">language</string>
+    <string name="pref_lang_true">English Language</string>
+    <string name="pref_lang_false">Arabic Language</string>
+
+
+
+    <!--activity_book_flight-->
+
+    <string name="from_city">From City:</string>
+    <string name="from_hour">from Hour</string>
+    <string name="Economy">Economy</string>
+    <string name="EconomyPrice">Economy Price</string>
+    <string name="Economy_seat">Economy Seat</string>
+    <string name="to_city">To City:</string>
+    <string name="flight_duration">Flight Duration</string>
+    <string name="business">Business</string>
+    <string name="BusinessPrice">Business Price</string>
+    <string name="Adult">Adult: </string>
+    <string name="AirLine_name">AirLine Name: </string>
+    <string name="Totalcost">Total Cost</string>
+    <string name="submitt_booking">Submit your Booking</string>
+
+    <!--activity_book_hotel-->
+    <string name="choose_duration">Choose Duration: </string>
+    <string name="check_in">Check-In Date: </string>
+    <string name="check_out">Check-Out Date: </string>
+    <string name="Continue">Continue</string>
+
+    <!--activity_change_password-->
+    <string name="current_password">Current Password:</string>
+    <string name="new_password">New Password:</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="change_password">Change Password</string>
+
+    <!--activity_charge_credit-->
+    <string name="card_type">Credit card type: </string>
+    <string name="name_on_Card">Card Holder Name: </string>
+    <string name="card_number">Card Number: </string>
+    <string name="cvc">(CVC): </string>
+    <string name="expierd_date">Card expiration date: </string>
+    <string name="new_credit">New Credit: </string>
+    <string name="submit_charge">Submit Charge: </string>
+
+    <!--activity_city_info-->
+    <string name="EngName">City Name in English:</string>
+    <string name="ViewHotels">View Hotels: </string>
+
+    <!--activity_country-->
+    <string name="choose_your_destination">Choose Your Destination:</string>
+
+    <!--activity_flight_home-->
+    <string name="search_for_flight">Search for Flight: </string>
+    <string name="get_flight_schedule">Get Flights Schedule: </string>
+
+    <!--activity_flight_schedule-->
+    <string name="from">From: </string>
+    <string name="select_from_city">Select from city</string>
+    <string name="to">To: </string>
+    <string name="select_to_city">Select to city</string>
+    <string name="get_Schedule">Get The Schedule</string>
+
+    <!--activity_forget_password-->
+    <string name="msg1">Enter Your Email to send new password:</string>
+    <string name="reset_password">Reset Password</string>
+
+    <!--activity_home-->
+    <string name="flights">Flights</string>
+    <string name="Hotels">Hotels</string>
+    <string name="Tourism_Offers">Tourism Offers</string>
+    <string name="my_reservations">My Reservations</string>
+    <string name="my_account">My Account</string>
+
+    <!--activity_hotel_home-->
+    <string name="search_for_hotel">Search for Hotel</string>
+    <string name="my_hotel_reservations">My Hotel Reservations</string>
+
+    <!--activity_hotel_info-->
+    <string name="engName">English Name</string>
+    <string name="hotelStars">Hotel Stars:</string>
+    <string name="hotel_rating">Hotel Rating:</string>
+    <string name="add_rate">Add Rate</string>
+    <string name="city_name">City Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="website">Website</string>
+    <string name="email">Email</string>
+    <string name="check_for_hotel_room">Check for Hotel Room</string>
+    <string name="hotel_location">Hotel Location</string>
+    <string name="call_hotel">Call Hotel</string>
+
+
+    <!--activity_hotel_rooms-->
+    <string name="HotelName">Hotel Name</string>
+
+    <!--activity_login-->
+    <string name="login">LOGIN</string>
+    <string name="TO1">TO</string>
+    <string name="YOURACCOUNT">YOUR ACCOUNT</string>
+    <string name="username">USERNAME</string>
+    <string name="set_user_name">set username</string>
+    <string name="password">Password</string>
+    <string name="set_password">set password</string>
+    <string name="forget_password">forget password?</string>
+    <!--activity_main-->
+    <string name="start">START</string>
+    <string name="sign_up">SIGN-UP</string>
+
+    <!--activity_my_flight_reservations-->
+    <string name="my_flight_reservations">My Flight RESERVATIONS</string>
+
+    <!--activity_my_offer_reservations-->
+    <string name="my_offer_reservations">My Offer RESERVATIONS</string>
+
+    <!--activity_offer_home-->
+    <string name="get_all_offers">get All offers</string>
+    <string name="get_offers_options">Get offers options</string>
+
+    <!--activity_register-->
+    <string name="registration">Registration</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="gender">Gender:</string>
+    <string name="country">Country:</string>
+    <string name="city">City:</string>
+    <string name="register">Register</string>
+
+    <!--activity_search_flights-->
+    <string name="date">Date</string>
+
+    <!--activity_search_offer-->
+    <string name="search_your_offer">Search Your Offer</string>
+
+    <!--activity_send_message-->
+    <string name="send_message">Send Message</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_email_subject">Enter Your Message Subject</string>
+    <string name="enter_your_message">Enter Your Message</string>
+    <string name="send">Send</string>
+
+    <!--activity_update_userinfo-->
+    <string name="update_your_info">Update your Info</string>
+
+    <!--flights_list-->
+    <string name="Filtered_flights">Filtered Flights</string>
+
+    <!--nav_header_side_menu-->
+    <string name="welcome">Welcome!</string>
+
+    <!--reserve_flight_confirmation-->
+    <string name="flight_reservation">Flight RESERVATION</string>
+    <string name="flight_to">Flight to:</string>
+    <string name="reservation_number">Reference Number:</string>
+    <string name="time">Time</string>
+    <string name="flight_class">Flight Class</string>
+    <string name="flight_number">Flight number:</string>
+    <string name="passenger_name">Passenger Name:</string>
+    <string name="passengers_counts">Passengers Counts:</string>
+    <string name="reservation_cost">Reservation cost</string>
+    <string name="reservation_date_and_time">Reservation Date and Time:</string>
+    <string name="cancel_reservation">Cancel Reservation</string>
+
+    <!--reserve_hotel_confermation-->
+    <string name="hotel_reservation">HOTEL RESERVATION</string>
+    <string name="reference_number">Reference Number:</string>
+    <string name="type">Type:</string>
+    <string name="Guests_count">Guests count:</string>
+    <string name="Guest">Guest:</string>
+
+    <!--reserve_offer-->
+    <string name="from_date">From Date:</string>
+    <string name="to_date">To Date:</string>
+    <string name="old_price">Old Price:</string>
+    <string name="new_price">New Price:</string>
+    <string name="Flights">Flights:</string>
+    <string name="Going_Flight">Going Flight:</string>
+    <string name="return_flight">Return Flight:</string>
+
+    <!--reserve_offer-->
+    <string name="hotel">Hotel:</string>
+    <string name="reserve_offer">Reserve The Offer</string>
+
+    <!--reserve_offer_confirmation-->
+    <string name="offer_reservation">Offer RESERVATION</string>
+    <string name="duration">Duration:</string>
+    <string name="seat_number">Seat Number:</string>
+
+    <!--row_flight-->
+    <string name="BusinessSeat">Business Seat</string>
+    <string name="any_hotel_name">AnyHotelName</string>
+
+    <!--row_offer-->
+    <string name="go_to">Go To</string>
+    <string name="DestinationCity">Destination City</string>
+
+    <!--row_room-->
+    <string name="HotelRoomName">Hotel Room Name</string>
+    <string name="HotelRoomType">Hotel Room Type</string>
+    <string name="room_price">Room Price</string>
+    <string name="reserve">Reserve</string>
+
+    <!--Schedule_flights_list-->
+    <string name="FlightsSchedule">Flights Schedule</string>
+
+    <!--activity_side_menu_drawer-->
+    <string name="chargeNewCredit">Charge new Credit</string>
+    <string name="changePassword">Change Password</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="change_app_language">Change App Language</string>
+    <string name="LogOut">LogOut</string>
+    <string name="Share">Share</string>
+
+    <string name="credit">Your Credit: </string>
+
+
+
+    <string name="at">at</string>
+    <string name="USD">$</string>
+
+    <string name="offeredFor">offered For: </string>
+    <string name="day"> Day</string>
+    <string name="people">People</string>
+    <string name="about_hotel">About Hotel</string>
+
+
+
+    <!--LABELS ///////////////-->
+    <string name="home">Home</string>
+    <string name="countries">Countries</string>
+    <string name="HotelRooms">Hotel Rooms</string>
+    <string name="bookRoom">Book Room</string>
+    <string name="BookFlight">Book Flight</string>
+    <string name="myFlightReservations">My Flight Reservations</string>
+    <string name="HotelHome">Hotel Home</string>
+    <string name="MyAccount">My Account</string>
+    <string name="OfferInfo">Offer Info</string>
+    <string name="bookOffer">Book Offer</string>
+    <string name="OffersHome">Offers Home</string>
+    <string name="GetStart">GetStart</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

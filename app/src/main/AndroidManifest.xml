@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.travelandtourism">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/dsh_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/dsh_ic"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Activities.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/home" />
+
+        <activity
+            android:name=".Activities.CountryActivity"
+            android:label="@string/country" />
+        <activity
+            android:name=".Activities.CountriesActivity"
+            android:label="@string/countries" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="@string/login" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:label="@string/register" />
+        <activity
+            android:name=".Activities.CityActivity"
+            android:label="@string/city" />
+        <activity
+            android:name=".Activities.HotelsActivity"
+            android:label="@string/Hotels" />
+        <activity
+            android:name=".Activities.HotelActivity"
+            android:label="@string/hotel" />
+        <activity
+            android:name=".Activities.HotelRooms"
+            android:label="@string/HotelRooms" />
+        <activity
+            android:name=".Activities.BookRoomActivity"
+            android:label="@string/bookRoom" />
+        <activity
+            android:name=".Activities.MyHotelReservations"
+            android:label="@string/hotel_reservation" />
+        <activity
+            android:name=".Activities.MyHotelReservationActivity"
+            android:label="@string/hotel_reservation" />
+        <activity
+            android:name=".Activities.SearchFligtsActivity"
+            android:label="@string/Flights" />
+        <activity
+            android:name=".Activities.FlightsScheduleActivity"
+            android:label="@string/Flights" />
+        <activity
+            android:name=".Activities.BookFlightActivity"
+            android:label="@string/BookFlight" />
+        <activity
+            android:name=".Activities.MyFlightReservationActivity"
+            android:label="@string/myFlightReservations" />
+        <activity
+            android:name=".Activities.MyFlightReservations"
+            android:label="@string/myFlightReservations" />
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:label="@string/home" />
+        <activity
+            android:name=".Activities.HomeActivity2"
+            android:label="@string/home" />
+        <activity
+            android:name=".Activities.FlightHomeActivity"
+            android:label="@string/Flights" />
+        <activity
+            android:name=".Activities.HotelHomeActivity"
+            android:label="@string/HotelHome" />
+        <activity
+            android:name=".Activities.MyAccountActivity"
+            android:label="@string/MyAccount" />
+        <activity
+            android:name=".Activities.OfferActivity"
+            android:label="@string/OfferInfo" />
+        <activity
+            android:name=".Activities.OffersActivity"
+            android:label="@string/Tourism_Offers" />
+        <activity
+            android:name=".Activities.SearchOffersActivity"
+            android:label="@string/Tourism_Offers" />
+        <activity
+            android:name=".Activities.BookOfferActivity"
+            android:label="@string/bookOffer" />
+        <activity
+            android:name=".Activities.OfferHomeActivity"
+            android:label="@string/OffersHome" />
+        <activity
+            android:name=".Activities.MyOfferReservationActivity"
+            android:label="@string/my_offer_reservations" />
+        <activity
+            android:name=".Activities.MyOfferReservations"
+            android:label="@string/my_offer_reservations" />
+        <activity
+            android:name=".Activities.ReserveRoomPriceConf"
+            />
+        <activity
+            android:name=".Activities.GetStart"
+            android:label="@string/GetStart" />
+        <activity
+            android:name=".Activities.SendMessageActivity"
+            android:label="@string/send_message"
+            android:parentActivityName=".Activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.ChargeCredit"
+            android:label="@string/chargeNewCredit"
+            android:parentActivityName=".Activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.ForgetPassword"
+            android:label="@string/forget_password" />
+        <activity
+            android:name=".Activities.ChangePasswordActivity"
+            android:label="@string/changePassword"
+            android:parentActivityName=".Activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Activities.UpdateUserInfoActivity"
+            android:label="@string/update_your_info"
+            android:parentActivityName=".Activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:label="@string/action_settings"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version">
+
+        </meta-data>
+        <!--Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <activity
+            android:name=".Activities.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Activities.MyTripsActivity" />
+
+        <provider
+            android:authorities="com.example.android.travelandtourism"
+            android:name="com.example.android.travelandtourism.Data.DSHContentProvider"
+            android:exported="false" />
+        <receiver android:name=".Widget.DSHWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dsh_widget_provider_info"/>
+        </receiver>
+        <service
+            android:name=".Widget.listViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <service android:name=".Widget.WidgetUpdateService"/>
+
+
+    </application>
+
+</manifest>

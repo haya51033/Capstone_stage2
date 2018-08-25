@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_weight="0"
+        android:background="@drawable/offer_home"/>
+
+    <Button
+        android:id="@+id/button_offer1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@android:drawable/star_big_on"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/get_all_offers" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+    <Button
+        android:id="@+id/button_offer2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff"
+        android:drawableLeft="@android:drawable/star_big_off"
+        android:drawableRight="@android:drawable/ic_media_play"
+        android:paddingLeft="10dp"
+        android:text="@string/get_offers_options" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        />
+
+</LinearLayout>

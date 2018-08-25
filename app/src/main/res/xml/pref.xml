@@ -1,0 +1,11 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.preference.CheckBoxPreference
+        android:defaultValue="@bool/pref_lang_default"
+        android:key="@string/pref_language_key"
+        android:summaryOff="@string/pref_lang_false"
+        android:summaryOn="@string/pref_lang_true"
+        android:title="@string/pref_lang_label" />
+
+
+</PreferenceScreen>

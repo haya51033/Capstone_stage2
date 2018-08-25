@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f2"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/msg_pic"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="@string/send_message"
+            android:textColor="#fff"
+            android:background="#7000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/tvTitle11"
+            />
+        </LinearLayout>
+    </FrameLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:drawableTint="#FF4081"
+           android:text="@string/enter_your_email"
+           android:textSize="20sp"
+           android:padding="8dp"
+           android:textColor="#6685c6"
+           android:id="@+id/tvEmail"/>
+       <EditText
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/stroke"
+           android:padding="8dp"
+           android:maxLines="1"
+           android:drawableTint="#FF4081"
+           android:inputType="textEmailAddress"
+           android:ems="10"
+           android:id="@+id/txtEmail"
+           android:contentDescription="set email"
+           />
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:drawableTint="#FF4081"
+           android:text="@string/enter_your_email_subject"
+           android:textSize="20sp"
+           android:textColor="#6685c6"
+           android:padding="8dp"
+           android:id="@+id/tvSubj"/>
+       <EditText
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:padding="8dp"
+           android:background="@drawable/stroke"
+           android:maxLines="1"
+           android:drawableTint="#FF4081"
+           android:inputType="textEmailSubject"
+           android:ems="10"
+           android:id="@+id/txtEmailSubj"
+           android:contentDescription="set email subject"
+           />
+
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:drawableTint="#FF4081"
+           android:text="enter_your_message"
+           android:padding="8dp"
+           android:textSize="20sp"
+           android:textColor="#6685c6"
+           android:id="@+id/tvMSG"/>
+
+       <EditText
+           android:id="@+id/txMessage"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:background="@drawable/stroke"
+           android:contentDescription="set Message"
+           android:drawableTint="#FF4081"
+           android:ems="10"
+           android:inputType="textMultiLine|textLongMessage"
+           android:maxLines="1"
+           android:padding="30dp"
+           />
+
+   </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:background="#01579B"
+        android:text="@string/send"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:onClick="buttonOnClick"/>
+</LinearLayout>
+</ScrollView>

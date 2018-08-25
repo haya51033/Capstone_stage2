@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/tvRowFromCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from_city"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/from_hour"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvRowFromHour"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Economy"
+                android:id="@+id/tvEco"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textColor="#4ea44b"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/EconomyPrice"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvEconomyPrice"
+                android:textColor="#4ea44b"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Economy_seat"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvEconomySeatNum"
+                android:visibility="gone"
+                android:textColor="#fa0000"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="0.5">
+            <TextView
+                android:id="@+id/tvRowToCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/to_city"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/flight_duration"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvFlightDuration"
+                android:textColor="@color/text_color"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/business"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:textColor="#3f4a86"
+                android:id="@+id/tvBus"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BusinessPrice"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBusinessPrice"
+                android:textColor="#3f4a86"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/BusinessSeat"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:padding="10dp"
+                android:id="@+id/tvBusinessSeatNum"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/AirLine_name"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/tvAirlineNma"
+            android:background="#99491d3d"
+            />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#7000"
+        android:layout_marginTop="3dp"/>
+
+
+    </LinearLayout>

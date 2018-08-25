@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/stroke"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/go_to"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:layout_weight="0.8"
+                    android:paddingLeft="5dp"
+                    android:textColor="#434343"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:text="@string/DestinationCity"
+                    android:padding="10dp"
+                    android:id="@+id/tvOfferDestination"
+                    android:textColor="@color/theme_primary_dark"
+                    android:layout_weight="0.2" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="@string/duration"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#f1f1f2"
+                android:id="@+id/tvOfferDuration"
+                android:textColor="#434343"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/passengers_counts"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#f1f1f2"
+                android:id="@+id/tvOfferCustCount"
+                android:textColor="#434343"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#f1f1f2"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reservation_number"
+                    android:textColor="#434343"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvResNumber"
+                    android:textColor="#c42c2c"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_margin="5dp"
+                android:background="#f1f1f2"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reservation_cost"
+                    android:layout_weight="0.5"
+                    android:textColor="#434343"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_price"
+                    android:layout_weight="0.5"
+                    android:id="@+id/tvNewPrice"
+                    android:textColor="#2c7c27" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivOfferCityImage"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/text_color"/>
+    </LinearLayout>
+
+</LinearLayout>

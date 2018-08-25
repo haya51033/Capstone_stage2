@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#EEEEEEEE">
+        <ImageView
+            android:id="@+id/ivOfferCityImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="@string/duration"
+            android:textColor="#000"
+            android:padding="5dp"
+            android:id="@+id/tvOfferDuration"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/passengers_counts"
+            android:textColor="#000"
+            android:padding="5dp"
+            android:id="@+id/tvOfferCustCount"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/old_price"
+                android:textColor="#000"
+                android:padding="5dp"
+                android:layout_weight="0.5"
+                android:id="@+id/tvOld"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_weight="0.5"
+                android:id="@+id/tvOldPrice"
+                android:textColor="#c42c2c"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_price"
+                android:textColor="#000"
+                android:padding="10dp"
+                android:layout_weight="0.5"
+                android:id="@+id/tvNew"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="0.5"
+                android:id="@+id/tvNewPrice"
+                android:textColor="#2c7c27"
+                />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#000"> </View>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:gravity="top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/go_to"
+                    android:layout_weight="0.8"
+                    android:padding="10dp"
+                    android:background="#7000"
+                    android:textColor="#ffff"
+                    android:gravity="center"
+                    android:id="@+id/tvGoTo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:text="@string/DestinationCity"
+                    android:padding="10dp"
+                    android:id="@+id/tvOfferDestination"
+                    android:textColor="#ffff"
+                    android:layout_weight="0.2"
+                    android:background="#7000" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</FrameLayout>

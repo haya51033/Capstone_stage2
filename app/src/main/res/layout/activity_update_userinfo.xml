@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:id="@+id/scrollParent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f2">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/Flayout"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/register_pic"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/registration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#7000"
+                android:textColor="#fff"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="@string/update_your_info"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Flayout"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+    <TextView
+        android:text="@string/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvFN"/>
+    <EditText
+        android:id="@+id/evuserFName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:text="@string/last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvLN"/>
+    <EditText
+        android:id="@+id/evuserLName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:text="@string/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvEm"/>
+    <EditText
+        android:id="@+id/evuserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+    <TextView
+        android:text="@string/gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvGen"/>
+
+    <EditText
+        android:id="@+id/evuserGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:text="@string/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvPh"/>
+
+    <EditText
+        android:id="@+id/evuserPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:text="@string/country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvCou"/>
+
+    <EditText
+        android:id="@+id/evuserCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+
+    <TextView
+        android:text="@string/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvCit"/>
+
+    <EditText
+        android:id="@+id/evuserCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/stroke"
+        android:padding="8dp"
+        android:textColor="#434343"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/stroke">
+    <TextView
+        android:text="@string/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#105ba9"
+        android:id="@+id/tvUser"/>
+
+    <TextView
+        android:id="@+id/evuserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#434343"/>
+</LinearLayout>
+
+    <Button
+        android:id="@+id/button_UpdateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="#01579B"
+        android:textColor="#fff"
+        android:fadingEdge="vertical"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:text="@string/update_your_info"
+        android:onClick="button_UpdateInfo1"/>
+
+
+
+    </LinearLayout>
+</LinearLayout>
+    </ScrollView>
