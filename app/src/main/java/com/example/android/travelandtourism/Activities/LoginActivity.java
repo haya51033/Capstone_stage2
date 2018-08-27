@@ -491,7 +491,7 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
 
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = prefs.edit();
-        editor.putString(SHARED_PREFS_KEY, json).commit();
+        editor.putString(SHARED_PREFS_KEY, json).apply();
 
     }
 

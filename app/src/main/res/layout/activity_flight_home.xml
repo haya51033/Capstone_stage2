@@ -6,7 +6,8 @@
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_weight="0"
-        android:background="@drawable/flightpic1"/>
+        android:background="@drawable/flightpic1"
+        android:contentDescription="@string/flights"/>
 
     <Button
         android:id="@+id/button_Flight1"

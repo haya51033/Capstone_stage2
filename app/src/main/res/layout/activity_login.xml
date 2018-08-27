@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -82,7 +81,6 @@
                 android:id="@+id/txtUsername"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:contentDescription="@string/set_user_name"
                 android:ems="10"
                 android:hint="@string/username"
                 android:inputType="textPersonName"
@@ -94,10 +92,10 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:drawableTint="#ab013b"
+                android:drawableTint="@color/theme_accent"
                 android:text="@string/password"
                 android:textSize="20sp"
-                android:textColor="#ffff"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:id="@+id/passwordLan"/>
             <EditText
@@ -106,11 +104,10 @@
                 android:gravity="start"
                 android:layout_marginTop="16dp"
                 android:maxLines="1"
-                android:drawableTint="#ab013b"
+                android:drawableTint="@color/theme_accent"
                 android:inputType="textPassword"
                 android:ems="10"
                 android:id="@+id/txtPassword"
-                android:contentDescription="@string/set_password"
                 android:hint="@string/password"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#999999"

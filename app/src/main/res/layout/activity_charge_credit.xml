@@ -6,7 +6,7 @@
     android:id="@+id/scrollParent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:scrollbarAlwaysDrawVerticalTrack="true">
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="75dp"
             android:background="@drawable/credit_pic"
-            />
+            android:contentDescription="@string/credit"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
@@ -65,7 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:id="@+id/edNameOnCard"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:hint="@string/name_on_Card"/>
 
 
     </LinearLayout>
@@ -89,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:inputType="number"
-            android:id="@+id/edCardNumber"/>
+            android:id="@+id/edCardNumber"
+            android:hint="@string/card_number"/>
 
 
     </LinearLayout>
@@ -111,7 +113,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
         android:inputType="number"
-        android:id="@+id/edCvc"/>
+        android:id="@+id/edCvc"
+        android:hint="@string/password"/>
 </LinearLayout>
 <LinearLayout
     android:layout_width="match_parent"
@@ -173,7 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:id="@+id/edNewCredit"/>
+            android:id="@+id/edNewCredit"
+            android:hint="@string/new_credit"/>
     </LinearLayout>
 
     <Button xmlns:android="http://schemas.android.com/apk/res/android"

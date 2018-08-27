@@ -50,7 +50,7 @@
         android:textColor="@color/theme_primary"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="16dp"
+        android:textSize="16sp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -58,7 +58,7 @@
         android:id="@+id/tvHRType"
         android:text="@string/HotelRoomType"
         android:textColor="#000"
-        android:textSize="14dp"/>
+        android:textSize="14sp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -66,13 +66,14 @@
         android:id="@+id/tvHRCostumerCount"
         android:text="@string/Guests_count"
         android:textColor="#000"
-        android:textSize="14dp"/>
+        android:textSize="14sp"/>
      </LinearLayout>
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:src="@drawable/r1"/>
+    android:src="@drawable/r1"
+    android:contentDescription="@string/rooms"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,7 +106,7 @@
         android:id="@+id/tvHRPrice"
         android:text="@string/room_price"
         android:textColor="#000"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:textStyle="bold"
         android:layout_gravity="end"
         android:background="#607D8B"
@@ -116,10 +117,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/reserve"
-            android:textColor="#E1F5FE"
-            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:background="#01579B"
+            android:background="@color/theme_primary"
             android:padding="10dp"
             android:textAlignment="center"
             android:gravity="center"

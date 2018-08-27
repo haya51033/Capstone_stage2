@@ -372,12 +372,12 @@ public class HomeActivity extends AppCompatActivity implements
     }
     public void UpdateWidget() {
         Cursor cursor = getHotelReservations();
-        String hotelName="";
-        String checkIn ="";
+        String hotelName;
+        String checkIn;
 
         Cursor cursor1 = getFlightReservations();
-        String CityName = "";
-        String FlightDate = "";
+        String CityName;
+        String FlightDate;
         object = new WidgetInfo();
         intent1 = new Intent(getApplicationContext(), DSHWidgetProvider.class);
         Bundle args1 = new Bundle();
@@ -409,7 +409,7 @@ public class HomeActivity extends AppCompatActivity implements
 
         prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         editor = prefs.edit();
-        editor.putString(SHARED_PREFS_KEY, json).commit();
+        editor.putString(SHARED_PREFS_KEY, json).apply();
 
     }
     private void setupSharedPreferences() {

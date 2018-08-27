@@ -333,7 +333,6 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
                 rating.setRating(1);
                 popDialog.setIcon(android.R.drawable.btn_star_big_on);
                 popDialog.setTitle("Add Rating: ");
-                // popDialog.setView(rating);
 
                 // Button OK
                 popDialog.setPositiveButton(android.R.string.ok,
@@ -405,11 +404,11 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
             }
             else
             {
-                Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn2), Toast.LENGTH_LONG).show();
             }
         }
         else {
-            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn2), Toast.LENGTH_LONG).show();
         }
 
 

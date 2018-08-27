@@ -26,7 +26,8 @@
             android:id="@+id/ivCityImage1"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/city"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -455,7 +456,8 @@
                 android:id="@+id/ivOfferHotelImage"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/hotel"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

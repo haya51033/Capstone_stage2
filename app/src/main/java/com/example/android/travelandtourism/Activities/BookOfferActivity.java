@@ -430,8 +430,8 @@ public class BookOfferActivity extends AppCompatActivity implements SharedPrefer
 
     public void UpdateCredit() {
         Cursor cursor = getSingleUser();
-        String oldCredit="";
-        String userId = "";
+        String oldCredit;
+        String userId;
 
         if (cursor.moveToFirst()){// data?
             oldCredit =  cursor.getString(cursor.getColumnIndex("credit"));

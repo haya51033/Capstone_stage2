@@ -24,12 +24,13 @@
     <string name="Flight_Reservation_Canceled">Flight Reservation Canceled</string>
     <string name="BookConfirmed">Book Confirmed :)</string>
     <string name="selectFlightClass">Please select your flight reserve Class!!</string>
-    <string name="youHaveLoggedIn">You Have login to do reserve...</string>
-    <string name="cantReceivedConfirmation">ERROR: we cant receive the confirmation ...</string>
+    <string name="youHaveLoggedIn">You Have login to do this reserve   </string>
+    <string name="youHaveLoggedIn2">You Have login to do this rate   </string>
+    <string name="cantReceivedConfirmation">ERROR: we can not receive the confirmation   </string>
     <string name="noResponse">"ERROR: no response!!"</string>
     <string name="noOfferSelected">No offer selected</string>
     <string name="errorCheckInAfterCheckOut">check-in can not be after check-out..</string>
-    <string name="errorCheckInSameCheckOut">check-in and check-out cant be in the same day..</string>
+    <string name="errorCheckInSameCheckOut">check-in and check-out can not be in the same day..</string>
     <string name="errorFillAllFields">Please fill in all fields..</string>
     <string name="PasswordChangedSuccessfully">Password changed successfully!!"</string>
     <string name="PasswordNotChange">Password not changed.. try again with true values</string>
@@ -226,13 +227,13 @@
 
     <!--activity_hotel_info-->
     <string name="engName">English Name</string>
-    <string name="hotelStars">Hotel Stars:</string>
-    <string name="hotel_rating">Hotel Rating:</string>
+    <string name="hotelStars">Hotel Stars: </string>
+    <string name="hotel_rating">Hotel Rating: </string>
     <string name="add_rate">Add Rate</string>
-    <string name="city_name">City Name</string>
-    <string name="phone_number">Phone Number</string>
-    <string name="website">Website</string>
-    <string name="email">Email</string>
+    <string name="city_name">City Name: </string>
+    <string name="phone_number">Phone Number: </string>
+    <string name="website">Website: </string>
+    <string name="email">Email: </string>
     <string name="check_for_hotel_room">Check for Hotel Room</string>
     <string name="hotel_location">Hotel Location</string>
     <string name="call_hotel">Call Hotel</string>
@@ -245,9 +246,9 @@
     <string name="login">LOGIN</string>
     <string name="TO1">TO</string>
     <string name="YOURACCOUNT">YOUR ACCOUNT</string>
-    <string name="username">USERNAME</string>
+    <string name="username">USERNAME: </string>
     <string name="set_user_name">set username</string>
-    <string name="password">Password</string>
+    <string name="password">Password: </string>
     <string name="set_password">set password</string>
     <string name="forget_password">forget password?</string>
     <!--activity_main-->
@@ -266,11 +267,11 @@
 
     <!--activity_register-->
     <string name="registration">Registration</string>
-    <string name="first_name">First Name:</string>
-    <string name="last_name">Last Name:</string>
-    <string name="gender">Gender:</string>
-    <string name="country">Country:</string>
-    <string name="city">City:</string>
+    <string name="first_name">First Name: </string>
+    <string name="last_name">Last Name: </string>
+    <string name="gender">Gender: </string>
+    <string name="country">Country: </string>
+    <string name="city">City: </string>
     <string name="register">Register</string>
 
     <!--activity_search_flights-->
@@ -300,26 +301,26 @@
     <string name="flight_to">Flight to:</string>
     <string name="reservation_number">Reference Number:</string>
     <string name="time">Time</string>
-    <string name="flight_class">Flight Class</string>
-    <string name="flight_number">Flight number:</string>
-    <string name="passenger_name">Passenger Name:</string>
-    <string name="passengers_counts">Passengers Counts:</string>
-    <string name="reservation_cost">Reservation cost</string>
-    <string name="reservation_date_and_time">Reservation Date and Time:</string>
+    <string name="flight_class">Flight Class: </string>
+    <string name="flight_number">Flight number: </string>
+    <string name="passenger_name">Passenger Name: </string>
+    <string name="passengers_counts">Passengers Counts: </string>
+    <string name="reservation_cost">Reservation cost </string>
+    <string name="reservation_date_and_time">Reservation Date and Time: </string>
     <string name="cancel_reservation">Cancel Reservation</string>
 
     <!--reserve_hotel_confermation-->
     <string name="hotel_reservation">HOTEL RESERVATION</string>
-    <string name="reference_number">Reference Number:</string>
-    <string name="type">Type:</string>
-    <string name="Guests_count">Guests count:</string>
-    <string name="Guest">Guest:</string>
+    <string name="reference_number">Reference Number: </string>
+    <string name="type">Type: </string>
+    <string name="Guests_count">Guests count: </string>
+    <string name="Guest">Guest: </string>
 
     <!--reserve_offer-->
-    <string name="from_date">From Date:</string>
-    <string name="to_date">To Date:</string>
-    <string name="old_price">Old Price:</string>
-    <string name="new_price">New Price:</string>
+    <string name="from_date">From Date: </string>
+    <string name="to_date">To Date: </string>
+    <string name="old_price">Old Price: </string>
+    <string name="new_price">New Price: </string>
     <string name="Flights">Flights:</string>
     <string name="Going_Flight">Going Flight:</string>
     <string name="return_flight">Return Flight:</string>

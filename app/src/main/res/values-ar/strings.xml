@@ -33,6 +33,75 @@
 
 
 
+    <!--TOAST/////-->
+    <string name="no_offers_to_show">لا يوجد عروض سياحية متوفرة الآن</string>
+    <string name="serverDown">هناك مشكلة في الخادم, الرجاء المحاولة لاحقاً</string>
+    <string name="connectFailed">فضل في الاتصال</string>
+    <string name="noReservations">لا يوجد لديك اية حجوزات!</string>
+    <string name="Flight_Reservation_Canceled">تم الغاء حجز رحلتك</string>
+    <string name="BookConfirmed">تم تأكيد الحجز</string>
+    <string name="selectFlightClass">الرجاء اختيار درجة الرحلة</string>
+    <string name="youHaveLoggedIn">يجب عليك تسجيل الدخول من أجل اجراء هذا الحجز!   </string>
+    <string name="youHaveLoggedIn2">يجب عليك تسجيل الدخول من أجل اجراء هذا التقييم!</string>
+    <string name="cantReceivedConfirmation">خطأ! لم نتمكن من استلام التأكيد. </string>
+    <string name="noResponse">خطأ! لا يوجد استجابة</string>
+    <string name="noOfferSelected">لا يوجد عرض مختار!</string>
+    <string name="errorCheckInAfterCheckOut">لا يمكن ان يكون تاريخ الخروج قبل تاريخ الدخول!</string>
+    <string name="errorCheckInSameCheckOut">لا يمكن ان يكون كلا تاريخي الدخول والخروج في نفس اليوم!</string>
+    <string name="errorFillAllFields">الرجاء ملئ جميع الحقول</string>
+    <string name="PasswordChangedSuccessfully">تم تغيير كلمة المرور بنجاح</string>
+    <string name="PasswordNotChange">لم يتم تغيير كلمة المرور!! الرجاء اعادة المحاولة مع استخدام قيم صحيحة</string>
+    <string name="newPasswordNotMatch">لم تتطابق كلمة المرور الجديدة مع تأكيدها!</string>
+    <string name="EnglishLanguage">اللغة الانكليزية</string>
+    <string name="ArabicLanguage">اللغة العربية</string>
+    <string name="success_charge">تم شحن رصيدك بنجاح</string>
+    <string name="enterValue">الرجاء ادخال المبلغ الواجب شحنه</string>
+    <string name="noCity">لا يوجد مدينة لعرضها!</string>
+    <string name="noCountries">لا يوجد بلدان لعرضها!</string>
+    <string name="noFlight">لا يوجد رحلات جوية متوفرة!</string>
+    <string name="checkYourEmail">تم اعادة تعيين كلمة المرور بنجاح!! الرجاء تفقد البريد لالكتروني</string>
+    <string name="someInfoWrong">هنالك معلومات خاطئة</string>
+    <string name="enterValidEmail">الرجاء ادخال بريد الكتروني صالح!</string>
+    <string name="msgReco">دعني ارشح لك موقع دي اس اتش للعروض السياحية والسفر,  </string>
+    <string name="webSite">http://dshaya.somee.com/</string>
+    <string name="choose_one">اختر واحداً</string>
+    <string name="noHotel">لا يوجد فنادق لعرضها</string>
+    <string name="ThanksForRating">شكرا لك على التقييم! </string>
+    <string name="cancel">الغاء</string>
+    <string name="letsTravel">لنبدأ السفر :D !!</string>
+    <string name="passwordOrUsernameIsWrong">كلمة المرور او اسم المستخدم خاطئ, الرجاء اعادة المحاولة!</string>
+    <string name="hotel_reservation_canceled">تم الغاء حجزك الفندقي!</string>
+    <string name="youHaveNotReservations">لا يوجد لديك اية حجوزات!</string>
+    <string name="noOffer">لا يوجد هنالك اية عروض متاحة!</string>
+    <string name="registrationDone">تم التسجيل بنجاح, الرجاء تسجيل الدخول للاستمرار</string>
+    <string name="msg2">الرجاء اعادة المحاولة, اسم المستخدم يجب ان يحتوي على حروف وأرقام فقط</string>
+    <string name="msg3">كلمة المرور وتأكيدها غير متطابقين!</string>
+    <string name="msg4">لا يوجد رحل جوية في مثل هذا التاريخ, الرجاء اعادة المحاولة باستخدام تواريخ مختلفة</string>
+    <string name="msg5">لا يوجد عروض سياحية من او الى هذه المدن, الرجاء تغيير خيارات البحث</string>
+    <string name="msgSent">تم ارسال الرسالة بنجاح.</string>
+    <string name="msg6">تم تعديل ملعومات المستخدم بنجاح!</string>
+
+
+
+    <string name="hour">الساعة: </string>
+    <string name="rateValue">3.3</string>
+    <string name="setFirstName">ادخل الاسم الأول: </string>
+    <string name="setLastName">ادخل الكنية: </string>
+    <string name="setGender">ادخل الجنس: </string>
+    <string name="setEmail">ادخل البريد الالكتروني: </string>
+    <string name="setPhone">ادخل رقم الهاتف: </string>
+    <string name="setCountry">ادخل دولتك: </string>
+    <string name="setCity">ادخل مدينتك: </string>
+    <string name="setUsername">ادخل اسم مستخدم: </string>
+    <string name="setPassword">ادخل كلمة سر: </string>
+    <string name="set_confirm_password">أكد كلمة السر: </string>
+    <string name="setEmailSubject">ضع عنواناً لرسالتك: </string>
+    <string name="setMessage">ادخل نص الرسالة: </string>
+    <string name="DateFormat">MM/DD/YYYY</string>
+    <string name="rooms">غرفة </string>
+
+
+
     <string-array name="array_adult">
         <item>1</item>
         <item>2</item>
@@ -94,8 +163,8 @@
     <string name="action_settings">Settings</string>
 
     <!--preferance-->
-    <string name="pref_lang_label">اختر لغتك</string>
-    <string name="pref_language_key" translatable="false">اللغة</string>
+    <string name="pref_lang_label" translatable="false">اختر لغتك</string>
+    <string name="pref_language_key">اللغة</string>
     <string name="pref_lang_true">اللغة الانكليزية</string>
     <string name="pref_lang_false">اللغة العربية</string>
 
@@ -115,6 +184,15 @@
     <string name="AirLine_name">اسم شركة الطيران: </string>
     <string name="Totalcost">السعر الإجمالي: </string>
     <string name="submitt_booking">تأكيد الحجز: </string>
+
+    <!--reserve_offer-->
+    <string name="from_date">من التاريخ: </string>
+    <string name="to_date">الى التاريخ: </string>
+    <string name="old_price">السعر القديم: </string>
+    <string name="new_price">السعر الجديد: </string>
+    <string name="Flights">الرحلات الجوية: </string>
+    <string name="Going_Flight">رحلة الذهاب: </string>
+    <string name="return_flight">رحلة الإياب: </string>
 
     <!--activity_book_hotel-->
     <string name="choose_duration">إختر المدة</string>

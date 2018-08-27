@@ -13,7 +13,8 @@
             android:layout_height="300dp"
             android:src="@drawable/hotel1"
             android:layout_gravity="center"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/hotel"/>
     </LinearLayout>
 
     <LinearLayout
@@ -33,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/rateValue"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:drawableEnd="@android:drawable/ic_menu_my_calendar"
                 android:drawablePadding="5dp"
                 android:padding="15dp"
@@ -49,7 +50,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:padding="15dp"
                     android:background="#EEEEEEEE"
                     android:textColor="#000"/>
@@ -61,7 +62,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#000"
                     android:layout_weight="1"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:padding="15dp"
                     android:background="#EEEEEEEE"
                     android:drawableEnd="@android:drawable/ic_media_play"/>

@@ -12,7 +12,8 @@
             android:id="@+id/ivOfferCityImage"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/OfferInfo"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

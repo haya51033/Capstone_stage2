@@ -27,6 +27,7 @@
                     android:textAppearance="?android:textAppearanceLarge"
                     android:layout_weight="0.8"
                     android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
                     android:textColor="#434343"
                     />
                 <TextView
@@ -112,7 +113,8 @@
             android:id="@+id/ivOfferCityImage"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/reserve"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

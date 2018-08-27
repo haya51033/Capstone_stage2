@@ -10,6 +10,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +31,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MyFlightReservationActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+import static android.content.ContentValues.TAG;
+
+public class MyFlightReservationActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
     Intent intent;
     int referanceId;
 
@@ -77,6 +81,9 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
     boolean lang;
     String languageToLoad="en";
 
+
+
+
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +115,6 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
 
 
         cost = cursor.getInt(cursor.getColumnIndex("reservation_cost"));
-
         setContentView(R.layout.reserve_flight_confermation);
 
         TextView tv = (TextView)findViewById(R.id.tvRFC_FlightTo);
@@ -210,7 +216,6 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
         });
     }
 
-
     public Cursor getUsers() {
         cur =   getContentResolver().query(DSHContract.UserEntry.CONTENT_URI, USER_COLUMNS, null, null, null);
         return cur;
@@ -260,6 +265,8 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
             lang=sharedPreferences.getBoolean(key, getResources().getBoolean(R.bool.pref_lang_default));
         }
     }
+
+
 
 }
 

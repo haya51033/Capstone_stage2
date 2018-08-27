@@ -16,7 +16,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/account_pic"
-            android:elevation="12dp"/>
+            android:elevation="12dp"
+            android:contentDescription="@string/my_account"/>
     </LinearLayout>
 
     <LinearLayout

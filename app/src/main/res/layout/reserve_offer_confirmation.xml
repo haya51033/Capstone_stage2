@@ -53,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@drawable/hotel1"
-                android:scaleType="centerCrop"/>
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/city"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -471,7 +472,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:src="@drawable/hotel_pic1"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop"
+                        android:contentDescription="@string/city"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"

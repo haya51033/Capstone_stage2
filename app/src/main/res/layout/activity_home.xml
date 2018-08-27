@@ -27,7 +27,7 @@
         android:layout_weight="0"
         android:scaleType="center"
         android:src="@drawable/home1"
-        />
+        android:contentDescription="@string/home"/>
 
     <Button
         android:id="@+id/button_Flight"
@@ -38,6 +38,7 @@
         android:drawableStart="@drawable/fly"
         android:drawableEnd="@android:drawable/ic_media_play"
         android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/flights" />
 
     <View
@@ -55,7 +56,8 @@
         android:drawableStart="@drawable/hotelicon"
         android:drawableEnd="@android:drawable/ic_media_play"
         android:background="@android:color/white"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -71,7 +73,8 @@
         android:drawableStart="@drawable/blue_earth_icon"
         android:drawableEnd="@android:drawable/ic_media_play"
         android:background="@android:color/white"
-        android:paddingStart="10dp"/>
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -93,6 +96,8 @@
             android:drawableStart="@drawable/trip_icon"
             android:drawableEnd="@android:drawable/ic_media_play"
             android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textSize="10sp"
             android:text="@string/my_reservations" />
         <View
             android:layout_width="1dp"
@@ -110,6 +115,8 @@
             android:drawableEnd="@android:drawable/ic_media_play"
             android:fadingEdge="vertical"
             android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:textSize="10sp"
             android:text="@string/my_account" />
     </LinearLayout>
 

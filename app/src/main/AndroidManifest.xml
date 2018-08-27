@@ -80,7 +80,8 @@
             android:label="@string/myFlightReservations" />
         <activity
             android:name=".Activities.HomeActivity"
-            android:label="@string/home" />
+            android:label="@string/home"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".Activities.HomeActivity2"
             android:label="@string/home" />
@@ -158,10 +159,11 @@
         <activity
             android:name=".Settings.SettingsActivity"
             android:label="@string/action_settings"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".Activities.HomeActivity"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".Activities.HomeActivity" />
         </activity>
 
         <!--
