@@ -16,6 +16,75 @@
     <string name="search">Search&#8230;</string>
     <string name="Done_item">Done</string>
 
+    <!--TOAST/////-->
+    <string name="no_offers_to_show">no offers to show</string>
+    <string name="serverDown">Server down There is an Wrong, Please Try Again"</string>
+    <string name="connectFailed">Connect Failed</string>
+    <string name="noReservations">"You Have not any reservations!!"</string>
+    <string name="Flight_Reservation_Canceled">Flight Reservation Canceled</string>
+    <string name="BookConfirmed">Book Confirmed :)</string>
+    <string name="selectFlightClass">Please select your flight reserve Class!!</string>
+    <string name="youHaveLoggedIn">You Have login to do reserve...</string>
+    <string name="cantReceivedConfirmation">ERROR: we cant receive the confirmation ...</string>
+    <string name="noResponse">"ERROR: no response!!"</string>
+    <string name="noOfferSelected">No offer selected</string>
+    <string name="errorCheckInAfterCheckOut">check-in can not be after check-out..</string>
+    <string name="errorCheckInSameCheckOut">check-in and check-out cant be in the same day..</string>
+    <string name="errorFillAllFields">Please fill in all fields..</string>
+    <string name="PasswordChangedSuccessfully">Password changed successfully!!"</string>
+    <string name="PasswordNotChange">Password not changed.. try again with true values</string>
+    <string name="newPasswordNotMatch">New Password and Confirm Password not Matched !!</string>
+    <string name="EnglishLanguage">English Language.</string>
+    <string name="ArabicLanguage">Arabic Language.</string>
+    <string name="success_charge">success charge</string>
+    <string name="enterValue">Please Enter the value to charge..</string>
+    <string name="noCity">No City To show..</string>
+    <string name="noCountries">No Countries To show..</string>
+    <string name="noFlight">No Flights To show..</string>
+    <string name="checkYourEmail">Password Reset and send to your email, Please check Your email..</string>
+    <string name="someInfoWrong">some information wrong!!</string>
+    <string name="enterValidEmail">Please Enter Valid email!!</string>
+    <string name="msgReco">Let me recommend you this WebSite for Travel and Tourism, </string>
+    <string name="webSite">http://dshaya.somee.com/</string>
+    <string name="choose_one">choose one</string>
+    <string name="noHotel">No Hotel To show..</string>
+    <string name="ThanksForRating">Thank you for rating :)</string>
+    <string name="cancel">Cancel</string>
+    <string name="letsTravel">Lets Travel :D !!</string>
+    <string name="passwordOrUsernameIsWrong">Password or Username is False!! try again..</string>
+    <string name="hotel_reservation_canceled">Hotel Reservation Canceled</string>
+    <string name="youHaveNotReservations">You Have not any Reservations!</string>
+    <string name="noOffer">No Offer to show..</string>
+    <string name="registrationDone">Registration Done!! Please Login to continue..</string>
+    <string name="msg2">Try Again, User name must be only characters and number</string>
+    <string name="msg3">Password and confirm password dose not match!!</string>
+    <string name="msg4">No Flight Available in this Date, Please try another date..</string>
+    <string name="msg5">No Offers Available from ot to this cities, Please try another options..</string>
+    <string name="msgSent">Message Send Successfully .</string>
+    <string name="msg6">User Info Updated successfully!!</string>
+
+
+
+    <string name="hour">Hour: </string>
+    <string name="rateValue">3.3</string>
+    <string name="setFirstName">set First name</string>
+    <string name="setLastName">set Last name</string>
+    <string name="setGender">set Gender</string>
+    <string name="setEmail">set e-mail</string>
+    <string name="setPhone">set phone</string>
+    <string name="setCountry">set country</string>
+    <string name="setCity">set city</string>
+    <string name="setUsername">set Username</string>
+    <string name="setPassword">set Password</string>
+    <string name="set_confirm_password">confirm password</string>
+    <string name="setEmailSubject">set email subject</string>
+    <string name="setMessage">set Message</string>
+    <string name="DateFormat">MM/DD/YYYY</string>
+    <string name="rooms">Rooms</string>
+
+
+
+
 
     <string-array name="array_adult">
         <item>1</item>

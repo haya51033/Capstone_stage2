@@ -8,33 +8,25 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.Models.Message;
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ForgetPassword extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     RetrofitBuilder rB = new RetrofitBuilder();
     IApi service =rB.retrofit.create(IApi.class);
     EditText ed;
-    TextView textView;
-    Button button_resetPassword;
+
     boolean english = true;
     boolean lang;
     String languageToLoad="en";
@@ -77,14 +69,14 @@ public class ForgetPassword extends AppCompatActivity implements SharedPreferenc
                    {
                        setContentView(R.layout.activity_forget_password);
 
-                           Toast.makeText(getApplicationContext(),"Password Reset and send to your email, Please check Your email..", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(getApplicationContext(),getResources().getText(R.string.checkYourEmail), Toast.LENGTH_SHORT).show();
 
                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                        startActivity(intent);
                    }
                    else
                    {
-                       Toast.makeText(getApplicationContext(),"some information wrong!!", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(getApplicationContext(),getResources().getText(R.string.someInfoWrong), Toast.LENGTH_SHORT).show();
                    }
                }
 
@@ -96,7 +88,7 @@ public class ForgetPassword extends AppCompatActivity implements SharedPreferenc
        }
        else
            {
-               Toast.makeText(getApplicationContext(),"Please enter valid Email!!", Toast.LENGTH_SHORT).show();
+               Toast.makeText(getApplicationContext(),getResources().getText(R.string.enterValidEmail), Toast.LENGTH_SHORT).show();
            }
 
 

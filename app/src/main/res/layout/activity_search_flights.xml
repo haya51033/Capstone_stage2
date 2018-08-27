@@ -3,174 +3,183 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear1"
-        android:orientation="vertical">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/flightpic2"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
-            android:gravity="bottom"
-            android:orientation="vertical">
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/search_for_flight"
-            android:textColor="#fff"
-            android:background="#7000"
-            android:gravity="center"
-            android:padding="10dp"
-            android:textAppearance="?android:textAppearanceLarge"
-            android:id="@+id/tvTitle"
-            />
-        </LinearLayout>
-        </FrameLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="1"
-        android:padding="10dp">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
        <LinearLayout
-           android:layout_width="wrap_content"
-           android:layout_height="match_parent"
-           android:orientation="vertical"
-           android:layout_weight="0.5">
-           <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/from"
-               android:textAppearance="?android:textAppearanceMedium"
-               android:padding="10dp"
-               android:id="@+id/tvFrom"/>
-           <Button
-               android:id="@+id/btnshowDialog"
+               android:id="@+id/linear1"
+               android:orientation="vertical">
+
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   >
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="120dp"
+                           android:background="@drawable/flightpic2"
+                           />
+                   </LinearLayout>
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_gravity="bottom"
+                       android:gravity="bottom"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_width="fill_parent"
+                           android:layout_height="wrap_content"
+                           android:text="@string/search_for_flight"
+                           android:textColor="#fff"
+                           android:background="#7000"
+                           android:gravity="center"
+                           android:padding="10dp"
+                           android:textAppearance="?android:textAppearanceLarge"
+                           android:id="@+id/tvTitle"
+                           />
+                   </LinearLayout>
+               </FrameLayout>
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="fill_parent"
                android:layout_height="wrap_content"
-               android:background="#ccafb9"
-               android:text="@string/select_from_city"
-               android:textAllCaps="false"
-               android:textColor="#fff"
-               android:onClick="SelectCity"
-               android:padding="10dp"
-               android:layout_weight="0.5"
-               android:layout_margin="5dp"
-               />
+               android:orientation="horizontal"
+               android:weightSum="1"
+               android:padding="10dp">
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight="0.5">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/from"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       android:padding="10dp"
+                       android:id="@+id/tvFrom"/>
+                   <Button
+                       android:id="@+id/btnshowDialog"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:background="#ccafb9"
+                       android:text="@string/select_from_city"
+                       android:textAllCaps="false"
+                       android:textColor="#fff"
+                       android:onClick="SelectCity"
+                       android:padding="10dp"
+                       android:layout_weight="0.5"
+                       android:layout_margin="5dp"
+                       />
 
 
-           <TextView
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/date"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       android:padding="10dp"
+                       android:id="@+id/tvDate"
+                       />
+                   <EditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:maxLines="1"
+                       android:inputType="date"
+                       android:id="@+id/etFromDate"
+                       android:contentDescription="@string/date"
+                       android:clickable="true"
+                       android:padding="10dp"
+                       android:backgroundTint="@color/theme_accent"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical"
+                   android:layout_weight="0.5">
+                   <TextView
+                       android:id="@+id/tvTo"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="@string/to"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       android:padding="10dp"/>
+
+                   <Button
+                       android:id="@+id/btnshowDialogTo"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:background="#ccafb9"
+                       android:text="@string/select_to_city"
+                       android:textAllCaps="false"
+                       android:textColor="@color/white"
+                       android:onClick="SelectCity"
+                       android:padding="10dp"
+                       android:layout_weight="0.5"
+                       android:layout_margin="5dp"
+
+                       />
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="10dp"
+                       android:textAppearance="?android:textAppearanceMedium"
+
+                       />
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="10dp"
+                       android:textAppearance="?android:textAppearanceMedium"
+                       />
+
+
+
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+           <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:text="@string/date"
-               android:textAppearance="?android:textAppearanceMedium"
-               android:padding="10dp"
-               android:id="@+id/tvDate"
-               />
-           <EditText
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:maxLines="1"
-               android:inputType="date"
-               android:id="@+id/etFromDate"
-               android:contentDescription="Date"
-               android:clickable="true"
-               android:padding="10dp"
-               android:backgroundTint="@color/theme_accent"/>
+               android:layout_below="@+id/linear1"
+
+               >
+
+               <Button
+                   android:id="@+id/btnDoReserve"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="22dp"
+                   android:background="@color/theme_primary"
+                   android:text="@string/search"
+                   android:textAllCaps="false"
+                   android:textColor="#fff"
+                   android:textSize="18sp"
+                   android:onClick="button_searchFlight"
+                   android:padding="20dp"/>
+
+
+
+           </LinearLayout>
+
 
        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="0.5">
-            <TextView
-                android:id="@+id/tvTo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/to"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:padding="10dp"/>
-
-            <Button
-                android:id="@+id/btnshowDialogTo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="#ccafb9"
-                android:text="@string/select_to_city"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:onClick="SelectCity"
-                android:padding="10dp"
-                android:layout_weight="0.5"
-                android:layout_margin="5dp"
-
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:textAppearance="?android:textAppearanceMedium"
-
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                />
-
-
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linear1"
-
-        >
-
-        <Button
-            android:id="@+id/btnDoReserve"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="22dp"
-            android:background="@color/theme_primary"
-            android:text="@string/search"
-            android:textAllCaps="false"
-            android:textColor="#fff"
-            android:textSize="18sp"
-            android:onClick="button_searchFlight"
-            android:padding="20dp"/>
-
-
-
-    </LinearLayout>
-
-
+   </ScrollView>
 
     </LinearLayout>
 

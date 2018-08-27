@@ -88,7 +88,6 @@ public class HotelsActivity extends AppCompatActivity implements HotelsAdapter.H
                         if(hh.size() >0)
                         {
                             setContentView(R.layout.activity_hotels);
-                            //listView = (ListView) findViewById(R.id.listHotels);
                             rv_hotel = (RecyclerView) findViewById(R.id.listHotels);
                             progressBar = (ProgressBar) findViewById(R.id.progressHotel);
                             progressBar.setVisibility(View.GONE);
@@ -100,7 +99,7 @@ public class HotelsActivity extends AppCompatActivity implements HotelsAdapter.H
                         else
                             {
 
-                                    Toast.makeText(getApplicationContext(),"no hotels to show", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.noHotel), Toast.LENGTH_LONG).show();
 
                                 Intent intent = new Intent(getApplicationContext(), CityActivity.class)
                                         .putExtra(Intent.EXTRA_TEXT,cityId);
@@ -111,7 +110,7 @@ public class HotelsActivity extends AppCompatActivity implements HotelsAdapter.H
                     }
                     else
                     {
-                            Toast.makeText(getApplicationContext(),"no hotels to show", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.noHotel), Toast.LENGTH_LONG).show();
 
                             Intent intent = new Intent(getApplicationContext(), CityActivity.class)
                                 .putExtra(Intent.EXTRA_TEXT,cityId);
@@ -122,7 +121,7 @@ public class HotelsActivity extends AppCompatActivity implements HotelsAdapter.H
                 }
                 else
                     {
-                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), CityActivity.class)
                                 .putExtra(Intent.EXTRA_TEXT,cityId);
                         startActivity(intent);
@@ -133,7 +132,7 @@ public class HotelsActivity extends AppCompatActivity implements HotelsAdapter.H
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), CityActivity.class)
                         .putExtra(Intent.EXTRA_TEXT,cityId);
                 startActivity(intent);

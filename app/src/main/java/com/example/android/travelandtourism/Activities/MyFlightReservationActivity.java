@@ -14,35 +14,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Data.DSHContract;
 import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.Models.Flight;
-import com.example.android.travelandtourism.Models.FlightReservation;
-import com.example.android.travelandtourism.Models.HotelReservations;
-import com.example.android.travelandtourism.Models.Images;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.Message;
-import com.example.android.travelandtourism.Models.UserModel;
-import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.android.travelandtourism.Models.Message;
+import com.example.android.travelandtourism.R;
 import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 
 public class MyFlightReservationActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
     Intent intent;
@@ -185,7 +170,7 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
                                     try
                                     {
                                         getContentResolver().delete(DSHContract.FlightReservationsEntry.CONTENT_URI, "reservation_number='"+referanceId+"'",null);
-                                        Toast.makeText(getApplicationContext(), "Flight Reservation Canceled", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.Flight_Reservation_Canceled), Toast.LENGTH_LONG).show();
                                         resU = cost;
                                     }
                                     catch (Exception e)
@@ -201,23 +186,23 @@ public class MyFlightReservationActivity extends AppCompatActivity implements Sh
                                 }
                                 else
                                 {
-                                    Toast.makeText(getApplicationContext(), "Failed...", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                                 }
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                             }
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Message> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(), "No connection", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                     }
                 });

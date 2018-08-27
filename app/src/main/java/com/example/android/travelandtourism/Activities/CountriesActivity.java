@@ -9,20 +9,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
+
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Adapters.CountriesAdapter;
-import com.example.android.travelandtourism.Adapters.ImagesAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.Countries;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +27,6 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 
@@ -122,25 +116,25 @@ public class CountriesActivity extends AppCompatActivity implements CountriesAda
                        }
                        else
                        {
-                           Toast.makeText(getApplicationContext(),"No Countries To show..", Toast.LENGTH_LONG).show();
+                           Toast.makeText(getApplicationContext(),getResources().getText(R.string.noCountries), Toast.LENGTH_LONG).show();
                        }
 
                    }
                    else
                    {
-                       Toast.makeText(getApplicationContext(),"No Response....", Toast.LENGTH_LONG).show();
+                       Toast.makeText(getApplicationContext(),getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
                    }
                }
                else
                {
-                   Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                   Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                }
 
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Connect Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
 
             }
         });

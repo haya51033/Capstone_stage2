@@ -70,7 +70,7 @@
            android:inputType="textEmailAddress"
            android:ems="10"
            android:id="@+id/txtEmail"
-           android:contentDescription="set email"
+           android:contentDescription="@string/setEmail"
            />
 
        <TextView
@@ -92,7 +92,7 @@
            android:inputType="textEmailSubject"
            android:ems="10"
            android:id="@+id/txtEmailSubj"
-           android:contentDescription="set email subject"
+           android:contentDescription="@string/setEmailSubject"
            />
 
 
@@ -100,7 +100,7 @@
            android:layout_width="fill_parent"
            android:layout_height="wrap_content"
            android:drawableTint="#FF4081"
-           android:text="enter_your_message"
+           android:text="@string/enter_your_email"
            android:padding="8dp"
            android:textSize="20sp"
            android:textColor="#6685c6"
@@ -111,7 +111,7 @@
            android:layout_width="fill_parent"
            android:layout_height="wrap_content"
            android:background="@drawable/stroke"
-           android:contentDescription="set Message"
+           android:contentDescription="@string/setMessage"
            android:drawableTint="#FF4081"
            android:ems="10"
            android:inputType="textMultiLine|textLongMessage"

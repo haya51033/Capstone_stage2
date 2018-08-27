@@ -17,24 +17,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Adapters.FlightsScheduleAdapter;
-import com.example.android.travelandtourism.Adapters.ImagesAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.City;
 import com.example.android.travelandtourism.Models.Flight;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.Models.SpinnerModelView;
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -42,9 +37,6 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-
 
 public class FlightsScheduleActivity extends AppCompatActivity implements FlightsScheduleAdapter.FlightOnClickHandler,
         SharedPreferences.OnSharedPreferenceChangeListener{
@@ -207,7 +199,7 @@ public class FlightsScheduleActivity extends AppCompatActivity implements Flight
                       else
                       {
                           ////reservations is null
-                          Toast.makeText(getApplicationContext(),"No Cities to show", Toast.LENGTH_LONG).show();
+                          Toast.makeText(getApplicationContext(),getResources().getText(R.string.noCity), Toast.LENGTH_LONG).show();
 
                       }
                       citiesListSpinner = new ArrayList<>();
@@ -215,18 +207,18 @@ public class FlightsScheduleActivity extends AppCompatActivity implements Flight
                   }
                   else
                   {
-                      Toast.makeText(getApplicationContext(),"No Response....", Toast.LENGTH_LONG).show();
+                      Toast.makeText(getApplicationContext(),getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
                   }
               }
               else
               {
-                  Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                  Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
               }
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
             }// My hotel reservations
         });
     }
@@ -270,34 +262,33 @@ public class FlightsScheduleActivity extends AppCompatActivity implements Flight
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"No Flights To Show..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.noFlight), Toast.LENGTH_LONG).show();
                         }
 
                     }
                     else
                         {
-                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                     }
 
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
-
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 }
 
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"no connection..", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
 
             }
         });
     }
     else
     {
-        Toast.makeText(getApplicationContext(),"Please File All the Failed..", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
 
     }
 

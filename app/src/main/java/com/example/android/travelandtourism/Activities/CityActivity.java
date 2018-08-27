@@ -3,43 +3,30 @@ package com.example.android.travelandtourism.Activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.ScrollView;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Adapters.ImagesAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.City;
-import com.example.android.travelandtourism.Models.Countries;
 import com.example.android.travelandtourism.Models.Images;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class CityActivity extends AppCompatActivity implements ImagesAdapter.ImageOnClickHandler,
@@ -147,18 +134,19 @@ public class CityActivity extends AppCompatActivity implements ImagesAdapter.Ima
                       }
                       else
                           {
-                              Toast.makeText(getApplicationContext(),"No City To show..", Toast.LENGTH_LONG).show();
+                              Toast.makeText(getApplicationContext(),getResources().getText(R.string.noCity), Toast.LENGTH_LONG).show();
                           }
 
                    }
                    else
                    {
-                       Toast.makeText(getApplicationContext(),"No Response....", Toast.LENGTH_LONG).show();
+                       Toast.makeText(getApplicationContext(),getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
+
                    }
                }
                else
                {
-                   Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                   Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                }
 
             }
@@ -166,7 +154,7 @@ public class CityActivity extends AppCompatActivity implements ImagesAdapter.Ima
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
 
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
             }
         });

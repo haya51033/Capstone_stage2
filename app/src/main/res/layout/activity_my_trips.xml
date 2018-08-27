@@ -17,9 +17,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#ffff"
-        android:drawableLeft="@drawable/hotel_icon"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@drawable/hotel_icon"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
         android:text="@string/my_hotel_reservations" />
     <View
         android:layout_width="match_parent"
@@ -32,9 +32,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#ffff"
-        android:drawableLeft="@drawable/fly"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@drawable/fly"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
         android:text="@string/my_flight_reservations" />
     <View
         android:layout_width="match_parent"

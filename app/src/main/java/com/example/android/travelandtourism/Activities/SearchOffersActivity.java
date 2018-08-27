@@ -24,7 +24,6 @@ import android.widget.Toast;
 import com.example.android.travelandtourism.Adapters.OfferAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.City;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.Models.Offer;
 import com.example.android.travelandtourism.Models.SpinnerModelView;
 import com.example.android.travelandtourism.R;
@@ -60,6 +59,23 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
     boolean english = true;
     boolean lang;
     String languageToLoad="en";
+    final static String SOURCE_CITY ="source_city";
+    final static String DEST_CITY="dest_city";
+    final static String SOURCE_CITY_ID ="source_city_id";
+    final static String DEST_CITY_ID="dest_city_id";
+    String fCity = "Select City";
+    String sCity = "Select City";
+    int fCity_id = 0;
+    int sCity_id = 0;
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString(SOURCE_CITY, fCity);
+        outState.putString(DEST_CITY, sCity);
+        outState.putInt(SOURCE_CITY_ID, fCity_id);
+        outState.putInt(DEST_CITY_ID, sCity_id);
+        super.onSaveInstanceState(outState);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +98,12 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
         getSupportActionBar().setTitle(getResources().getString(R.string.search_your_offer));
 
 
+        if(savedInstanceState != null){
+            fCity = savedInstanceState.getString(SOURCE_CITY);
+            sCity = savedInstanceState.getString(DEST_CITY);
+            fromCity = savedInstanceState.getInt(SOURCE_CITY_ID);
+            toCity = savedInstanceState.getInt(DEST_CITY_ID);
+        }
 
         Call<ResponseValue> call2 = service.getCities();
         call2.enqueue(new Callback<ResponseValue>() {
@@ -103,10 +125,20 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                             btn2 = (Button)findViewById(R.id.btnshowDialogTo);
                             btnSearchOffer=(Button)findViewById(R.id.btnSearchOffer);
 
+                            if(!fCity.equals("Select City")){
+                                btn.setText(fCity);
+                                btn.setBackgroundColor(Color.GREEN);
+
+                            }
+
+                            if(!sCity.equals("Select City")){
+                                btn2.setText(sCity);
+                                btn2.setBackgroundColor(Color.GREEN);
+                            }
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"no offers to show", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.noOffer), Toast.LENGTH_LONG).show();
 
                             Intent intent = new Intent(getApplicationContext(), OfferHomeActivity.class);
                             startActivity(intent);
@@ -117,7 +149,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(),"no offers to show", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.noOffer), Toast.LENGTH_LONG).show();
 
                         Intent intent = new Intent(getApplicationContext(), OfferHomeActivity.class);
                         startActivity(intent);
@@ -126,7 +158,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), OfferHomeActivity.class);
                     startActivity(intent);
                     finish();
@@ -135,7 +167,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"No connection", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg4), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -186,8 +218,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"No Offers Available from ot to this cities, Please try another options..", Toast.LENGTH_LONG).show();
-
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg5), Toast.LENGTH_LONG).show();
                         }
                     }
                 }
@@ -201,7 +232,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Please Fill All the Fields..", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -251,12 +282,16 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                     case R.id.btnshowDialog:
                         fromCity = city.getID();
                         String name = city.getName();
+                        fCity =name;
+                        fCity_id = fromCity;
                         btn.setText(name);
                         btn.setBackgroundColor(Color.GREEN);
                         break;
                     case R.id.btnshowDialogTo:
                         toCity = city.getID();
                         String name1 = city.getName();
+                        sCity = name1;
+                        sCity_id =toCity;
                         btn2.setText(name1);
                         btn2.setBackgroundColor(Color.GREEN);
                         break;

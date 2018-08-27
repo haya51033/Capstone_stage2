@@ -114,12 +114,10 @@ public class HomeActivity extends AppCompatActivity implements
 
         setupSharedPreferences();
         if(english){
-          //  Toast.makeText(getApplicationContext(),"English Language.",Toast.LENGTH_LONG).show();
             languageToLoad="en";
 
         }
         else if(!english){
-          //  Toast.makeText(getApplicationContext(),"Arabic Language.",Toast.LENGTH_LONG).show();
             languageToLoad="ar";
 
 
@@ -285,7 +283,7 @@ public class HomeActivity extends AppCompatActivity implements
             startActivity(intent);
 
         } else if (id == R.id.nav_ChangeLanguage) {
-            Toast.makeText(getApplicationContext(),"Setting",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.action_settings),Toast.LENGTH_LONG).show();
             Intent startSettingsActivity = new Intent(this, SettingsActivity.class);
             startActivity(startSettingsActivity);
 
@@ -293,11 +291,11 @@ public class HomeActivity extends AppCompatActivity implements
             try {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_SUBJECT, "DSH WebSite");
-                String sAux = "\nLet me recommend you this WebSite for Travel and Tourism \n\n";
-                sAux = sAux + "http://dshaya.somee.com/ \n\n";
+                i.putExtra(Intent.EXTRA_SUBJECT, getResources().getText(R.string.app_name));
+                String sAux = "\n "+getResources().getText(R.string.msgReco) + "\n\n";
+                sAux = sAux + getResources().getText(R.string.webSite)+" \n\n";
                 i.putExtra(Intent.EXTRA_TEXT, sAux);
-                startActivity(Intent.createChooser(i, "choose one"));
+                startActivity(Intent.createChooser(i, getResources().getText(R.string.choose_one)));
             } catch(Exception e) {
                 //
             }

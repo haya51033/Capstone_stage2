@@ -86,7 +86,7 @@ public class SendMessageActivity extends AppCompatActivity implements SharedPref
             call.enqueue(new Callback<Message>() {
                 @Override
                 public void onResponse(Call<Message> call, Response<Message> response) {
-                   Toast.makeText(getApplicationContext(),"Message Send Successfully .", Toast.LENGTH_LONG).show();
+                   Toast.makeText(getApplicationContext(),getResources().getText(R.string.msgSent), Toast.LENGTH_LONG).show();
 
 
                     Intent intent=new Intent(getApplicationContext(), HomeActivity.class);
@@ -95,14 +95,14 @@ public class SendMessageActivity extends AppCompatActivity implements SharedPref
 
                 @Override
                 public void onFailure(Call<Message> call, Throwable t) {
-                    Toast.makeText(getApplicationContext(),"Error....", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                 }
             });
         }
         else
         {
-                Toast.makeText(getApplicationContext(),"please fill all the required fields", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
 
 
         }

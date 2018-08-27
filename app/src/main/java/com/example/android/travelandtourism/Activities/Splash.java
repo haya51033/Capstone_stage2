@@ -18,15 +18,8 @@ import com.example.android.travelandtourism.R;
 
 
 
-/**
- * Created by haya on 12/10/2017.
- */
-
 public class Splash extends Activity {
 
-    /**
-     * Duration of wait
-     **/
     private final int SPLASH_DISPLAY_LENGTH = 3000;
 
 

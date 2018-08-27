@@ -2,10 +2,16 @@ apply plugin: 'com.android.application'
 
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'haya1994'
+            storeFile file("$rootDir/keyStore.jks")
+            storePassword 'haya1994'
+        }
+    }
     configurations.all {
         resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
-
-
 
     }
     compileSdkVersion 27
@@ -19,33 +25,32 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
         release {
+            lintOptions {
+                checkReleaseBuilds false
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+
+
         }
     }
-
 }
-
-
-
 
 
 dependencies {
     apply plugin: 'announce'
-
-
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-
     implementation 'io.reactivex:rxjava:1.1.6'
     implementation 'io.reactivex:rxandroid:1.2.1'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     implementation 'com.jakewharton:butterknife:8.8.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
@@ -54,16 +59,10 @@ dependencies {
     implementation 'com.android.volley:volley:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.5.0'
     implementation 'com.google.dagger:dagger:2.4'
-
-
     implementation 'com.google.android.gms:play-services-places:15.0.1'
-    implementation 'com.google.android.gms:play-services-location:15.0.1'
     implementation 'com.google.android.gms:play-services-ads:15.0.0'
-
-    implementation 'com.android.support:design:27.1.1'
+    implementation "com.android.support:design:$androidSupportVersion"
     testImplementation 'junit:junit:4.12'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
-    implementation 'com.android.support:preference-v7:27.1.1'
-
-
+    implementation "com.android.support:preference-v7:$androidSupportVersion"
 }

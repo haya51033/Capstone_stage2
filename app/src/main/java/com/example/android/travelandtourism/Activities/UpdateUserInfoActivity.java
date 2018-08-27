@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -179,41 +178,42 @@ public class UpdateUserInfoActivity extends AppCompatActivity implements
                                         Log.e("SQL Error", "error" );
                                     } finally {
 
-                                            Toast.makeText(getApplicationContext(),"User Info Updated successfully!!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg6), Toast.LENGTH_LONG).show();
+
                                         Intent intent = new Intent(getApplicationContext(), MyAccountActivity.class);
                                         startActivity(intent);
                                     }
                                 }
                                 else
                                 {
-                                    Toast.makeText(getApplicationContext(),"Failed update....", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                 }
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                             }
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Message> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                     }
                 });
             }
             else
             {
-                Toast.makeText(getApplicationContext(),"Please Complete All the Failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
             }
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Please login to continue", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
         }
     }
     public Cursor getUsers() {

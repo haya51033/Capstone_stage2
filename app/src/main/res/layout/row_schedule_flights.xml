@@ -37,14 +37,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Date"
+            android:text="@string/date"
             android:textColor="@color/text_color"
             android:layout_weight="0.5"
             android:id="@+id/row_scheduleDate"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hour"
+            android:text="@string/hour"
             android:textColor="@color/text_color"
             android:layout_weight="0.5"
             android:id="@+id/row_scheduleTime"/>
@@ -54,7 +54,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="AirLine Name"
+        android:text="@string/AirLine_name"
         android:textAppearance="?android:textAppearanceMedium"
         android:gravity="center"
         android:padding="10dp"

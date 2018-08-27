@@ -60,57 +60,24 @@ public class HotelRooms extends AppCompatActivity implements HotelRoomsAdapter.H
 
         ArrayList<HotelRoom> object = (ArrayList<HotelRoom>) args.getSerializable("RoomLIST");
 
-        //List<Bar> bars = getArguments().getParcelable("bars");
-        //ArrayList<HotelRoom> object = args.getParcelable("RoomLIST");
-
         Intent intent1 = getIntent();
         String hotelName =intent1.getStringExtra("hotelName");
         Intent intent11 = getIntent();
         String hotelNameAr =intent11.getStringExtra("hotelNameAr");
 
-        //listView = (ListView) findViewById(R.id.listHotelRooms);
         progressBar = (ProgressBar) findViewById(R.id.progressHoteRooms);
         progressBar.setVisibility(View.GONE);
-      //  listView.setVisibility(View.VISIBLE);
 
         TextView tv = (TextView)findViewById(R.id.tvHR_HotelNme);
         TextView tv2 = (TextView)findViewById(R.id.tvHR_HotelNmeAr);
 
-      /*  if(lan.getLanguage().equals("Arabic"))
+        if(!english)
         {
-            tv.setText(hotelName+ ", ");
-            tv2.setText( ", غرف فندق:  "+hotelNameAr);
-
+            tv2.setText(getResources().getText(R.string.HotelRooms)+hotelNameAr);
         }
-        else
-            {
-                tv.setText(hotelName+" Rooms:");
-            }*/
 
-        tv.setText(hotelName+" Rooms:");
-
-
+        tv.setText(hotelName+getResources().getText(R.string.rooms));
         configureRecyclerView(object);
-
-     /*  final HotelRoomsAdapter adapter = new HotelRoomsAdapter(getApplicationContext(),R.layout.row_room,object);
-        listView.setAdapter(adapter);
-
-
-       // Button button = (Button) findViewById(R.id.btnReserveRoom);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int roomId = adapter.getItem(position).getId();
-                int nightPrice = adapter.getItem(position).getNightPrice();
-
-                Intent intent=new Intent(getApplicationContext(), BookRoomActivity.class)
-                        .putExtra(Intent.EXTRA_TEXT,roomId);
-                intent.putExtra("NightPrice",nightPrice);
-                startActivity(intent);
-
-            }
-        });*/
-
 
     }
 

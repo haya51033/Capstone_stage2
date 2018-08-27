@@ -255,7 +255,7 @@
                 android:textColor="#434343"
                 android:id="@+id/tvOfferInfoFlight1Airline"
                 android:textAlignment="gravity"
-                android:gravity="left"
+                android:gravity="start"
                 />
          <!--   <TextView
                 android:layout_width="match_parent"
@@ -387,7 +387,7 @@
                 android:text="@string/AirLine_name"
                 android:layout_weight="0.5"
                 android:id="@+id/tvOfferInfoFlight2Airline"
-                android:gravity="left"
+                android:gravity="start"
                 android:textColor="#434343"
                 />
          <!--   <TextView

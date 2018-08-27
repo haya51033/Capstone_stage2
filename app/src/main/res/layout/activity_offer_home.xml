@@ -14,9 +14,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#ffff"
-        android:drawableLeft="@android:drawable/star_big_on"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@android:drawable/star_big_on"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
         android:text="@string/get_all_offers" />
     <View
         android:layout_width="match_parent"
@@ -29,9 +29,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="#ffff"
-        android:drawableLeft="@android:drawable/star_big_off"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@android:drawable/star_big_off"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
         android:text="@string/get_offers_options" />
     <View
         android:layout_width="match_parent"

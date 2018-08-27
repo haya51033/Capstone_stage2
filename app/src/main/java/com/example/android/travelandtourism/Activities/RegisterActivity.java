@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -140,7 +139,7 @@ public class RegisterActivity extends AppCompatActivity implements SharedPrefere
                              if ( response.body().getUserModel().getSucceeded() == true)
                              {
 
-                                     Toast.makeText(getApplicationContext(),"Registration Done!! Please Login to continue..", Toast.LENGTH_LONG).show();
+                                     Toast.makeText(getApplicationContext(),getResources().getText(R.string.registrationDone), Toast.LENGTH_LONG).show();
 
                                  Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                  startActivity(intent);
@@ -153,28 +152,29 @@ public class RegisterActivity extends AppCompatActivity implements SharedPrefere
                              }
                              else
                              {
-                                 Toast.makeText(getApplicationContext(),"There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                 Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
+
                              }
                          }
                          else{
 
-                             Toast.makeText(getApplicationContext(),"Bad Request", Toast.LENGTH_LONG).show();
+                             Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                          }
                      }
                      @Override
                      public void onFailure(Call<ResponseValue> call, Throwable t) {
-                         Toast.makeText(getApplicationContext(),"Try Again, User name must be only characters and number", Toast.LENGTH_LONG).show();
+                         Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg2), Toast.LENGTH_LONG).show();
                      }
                  });
              }
             else
                 {
-                    Toast.makeText(getApplicationContext(),"Password and confirm password dose not match!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg3), Toast.LENGTH_LONG).show();
                 }
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Please Fill All Field .. ", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
         }
 
     }

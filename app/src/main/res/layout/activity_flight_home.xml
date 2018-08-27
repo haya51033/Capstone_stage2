@@ -14,9 +14,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@color/white"
-        android:drawableLeft="@drawable/fly"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@drawable/fly"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/search_for_flight" />
     <View
         android:layout_width="match_parent"
@@ -29,15 +30,15 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@color/white"
-        android:drawableLeft="@drawable/fly"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@drawable/fly"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:text="@string/get_flight_schedule" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/darker_gray"
-        />
+        android:background="@android:color/darker_gray" />
 
 
 </LinearLayout>

@@ -183,24 +183,24 @@ public class MyOfferReservationActivity extends AppCompatActivity implements Sha
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"You Have no reservation ..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), getResources().getText(R.string.youHaveNotReservations), Toast.LENGTH_LONG).show();
                         }
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(),"no response ..", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
 
                     }
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
             }
         });

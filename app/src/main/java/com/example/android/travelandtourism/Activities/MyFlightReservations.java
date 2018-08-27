@@ -86,7 +86,7 @@ public class MyFlightReservations extends AppCompatActivity implements MyFlightR
         if(mCursor.getCount() ==0)
         {
 
-            Toast.makeText(getApplicationContext(),"You Have not any reservations!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.noReservations), Toast.LENGTH_LONG).show();
         }
         else
         {

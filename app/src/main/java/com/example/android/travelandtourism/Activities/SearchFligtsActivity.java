@@ -29,16 +29,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.travelandtourism.Adapters.FlightsAdapter;
-import com.example.android.travelandtourism.Adapters.ImagesAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.City;
 import com.example.android.travelandtourism.Models.Flight;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.Models.SpinnerModelView;
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -48,8 +43,6 @@ import java.util.Locale;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchFligtsActivity extends AppCompatActivity implements
         DatePickerDialog.OnDateSetListener, FlightsAdapter.FlightOnClickHandler,
@@ -69,6 +62,7 @@ public class SearchFligtsActivity extends AppCompatActivity implements
     TextView tvTitle;
     TextView tvDate;
     Button btnDoReserve;
+    String dateS = "";
 
     RetrofitBuilder rB = new RetrofitBuilder();
     IApi service =rB.retrofit.create(IApi.class);
@@ -80,6 +74,25 @@ public class SearchFligtsActivity extends AppCompatActivity implements
     boolean english = true;
     boolean lang;
     String languageToLoad="en";
+
+    final static String SOURCE_CITY ="source_city";
+    final static String DEST_CITY="dest_city";
+    final static String SOURCE_CITY_ID ="source_city_id";
+    final static String DEST_CITY_ID="dest_city_id";
+    String fCity = "Select City";
+    String sCity = "Select City";
+    int fCity_id = 0;
+    int sCity_id = 0;
+    final static String DATE_ ="date";
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putString(SOURCE_CITY, fCity);
+        outState.putString(DEST_CITY, sCity);
+        outState.putInt(SOURCE_CITY_ID, fCity_id);
+        outState.putInt(DEST_CITY_ID, sCity_id);
+        outState.putString(DATE_, dateS);
+        super.onSaveInstanceState(outState);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,6 +113,14 @@ public class SearchFligtsActivity extends AppCompatActivity implements
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
         getSupportActionBar().setTitle(getResources().getString(R.string.search_for_flight));
 
+        if(savedInstanceState != null){
+            fCity = savedInstanceState.getString(SOURCE_CITY);
+            sCity = savedInstanceState.getString(DEST_CITY);
+            fromCity = savedInstanceState.getInt(SOURCE_CITY_ID);
+            toCity = savedInstanceState.getInt(DEST_CITY_ID);
+            dateS = savedInstanceState.getString(DATE_);
+
+        }
 
         Call<ResponseValue> call2 = service.getCities();
         call2.enqueue(new Callback<ResponseValue>() {
@@ -121,6 +142,19 @@ public class SearchFligtsActivity extends AppCompatActivity implements
                     tvTo =(TextView)findViewById(R.id.tvTo);
                     tvDate =(TextView)findViewById(R.id.tvDate);
                     btnDoReserve =(Button)findViewById(R.id.btnDoReserve);
+                    if(!fCity.equals("Select City")){
+                        btn.setText(fCity);
+                        btn.setBackgroundColor(Color.GREEN);
+
+                    }
+
+                    if(!sCity.equals("Select City")){
+                        btn2.setText(sCity);
+                        btn2.setBackgroundColor(Color.GREEN);
+                    }
+                    if(!dateS.equals("")){
+                        et.setText(dateS);
+                    }
 
                     et.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -134,7 +168,7 @@ public class SearchFligtsActivity extends AppCompatActivity implements
                 else
                 {
                     ////reservations is null
-                    Toast.makeText(getApplicationContext(),"Some thing wrong!!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                 }
                 citiesListSpinner = new ArrayList<>();
@@ -144,9 +178,10 @@ public class SearchFligtsActivity extends AppCompatActivity implements
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
             }// My hotel reservations
         });
+
 
     }
 
@@ -154,12 +189,13 @@ public class SearchFligtsActivity extends AppCompatActivity implements
     public void onDateSet(DatePicker view, int year, int month, int day) {
         Log.w("DatePicker",day+"/"+month+"/"+ year);
         if (test ==1){et.setText((month+1) +"/"+day+"/"+ year);}
+        dateS = et.getText().toString();
 
     }
 
     @Override
     public void onClickFlight(Flight flight1) {
-       int flightId = flight1.getId();
+        int flightId = flight1.getId();
         ArrayList<Flight> obj = new ArrayList<>();
         for (Flight flight : arrayList) {
             if (flight.getId() == flightId) {
@@ -189,45 +225,45 @@ public class SearchFligtsActivity extends AppCompatActivity implements
     public void button_searchFlight(View view)
     {
         if (et.getText().toString().trim().length() != 0 && fromCity !=0 && toCity !=0) {
-                Call<ResponseValue> call = service.SearchFlight(fromCity,toCity,et.getText().toString());
-                call.enqueue(new Callback<ResponseValue>() {
-                    @Override
-                    public void onResponse(Call<ResponseValue> call, Response<ResponseValue> response) {
-                        ResponseValue responseValue = response.body();
+            Call<ResponseValue> call = service.SearchFlight(fromCity,toCity,et.getText().toString());
+            call.enqueue(new Callback<ResponseValue>() {
+                @Override
+                public void onResponse(Call<ResponseValue> call, Response<ResponseValue> response) {
+                    ResponseValue responseValue = response.body();
 
-                        if (responseValue != null) {
-                            List<Flight> flights = responseValue.getFlight();
-                            if (flights.size() != 0) {
+                    if (responseValue != null) {
+                        List<Flight> flights = responseValue.getFlight();
+                        if (flights.size() != 0) {
                             setContentView(R.layout.flights_list);
-                                rv_flight = (RecyclerView) findViewById(R.id.listFlights);
+                            rv_flight = (RecyclerView) findViewById(R.id.listFlights);
 
-                                progressBar = (ProgressBar) findViewById(R.id.progressFlights);
-                                progressBar.setVisibility(View.GONE);
+                            progressBar = (ProgressBar) findViewById(R.id.progressFlights);
+                            progressBar.setVisibility(View.GONE);
 
                             arrayList.addAll(flights);
 
-                                TextView tv = (TextView) findViewById(R.id.tvFilterFlights);
-                                tv.setText("Flights at: " + flights.get(0).getDisplayDate());
+                            TextView tv = (TextView) findViewById(R.id.tvFilterFlights);
+                            tv.setText(getResources().getText(R.string.at) + flights.get(0).getDisplayDate());
 
-                                configureRecyclerView(arrayList);
+                            configureRecyclerView(arrayList);
                         }
                         else
-                            {
-                                Toast.makeText(getApplicationContext(),"No Flight Available in this Date, Please try another date..", Toast.LENGTH_LONG).show();
-                            }
+                        {
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg4), Toast.LENGTH_LONG).show();
+                        }
                     }
-                    }
+                }
 
-                    @Override
-                    public void onFailure(Call<ResponseValue> call, Throwable t) {
+                @Override
+                public void onFailure(Call<ResponseValue> call, Throwable t) {
 
-                    }
-                });
-    }
+                }
+            });
+        }
         else
-    {
-        Toast.makeText(getApplicationContext(),"Please Fill All the Fields..", Toast.LENGTH_LONG).show();
-    }
+        {
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
+        }
 
     }
 
@@ -268,9 +304,9 @@ public class SearchFligtsActivity extends AppCompatActivity implements
 
             }
             else
-                {
-                    spinnerName= cc.getNameEn();
-                }
+            {
+                spinnerName= cc.getNameEn();
+            }
             citiesInSpinner.add(new SpinnerModelView(spinnerId,spinnerName));
         }
     }
@@ -301,12 +337,16 @@ public class SearchFligtsActivity extends AppCompatActivity implements
                     case R.id.btnshowDialog:
                         fromCity = city.getID();
                         String name = city.getName();
+                        fCity =name;
+                        fCity_id = fromCity;
                         btn.setText(name);
                         btn.setBackgroundColor(Color.GREEN);
                         break;
                     case R.id.btnshowDialogTo:
                         toCity = city.getID();
                         String name1 = city.getName();
+                        sCity = name1;
+                        sCity_id =toCity;
                         btn2.setText(name1);
                         btn2.setBackgroundColor(Color.GREEN);
                         break;
@@ -316,7 +356,7 @@ public class SearchFligtsActivity extends AppCompatActivity implements
 
             }
         });
-         }
+    }
 
     private void setupSharedPreferences() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);

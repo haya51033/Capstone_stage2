@@ -38,21 +38,9 @@ import android.widget.Toast;
 import com.example.android.travelandtourism.Data.DSHContract;
 import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.MainActivity;
-import com.example.android.travelandtourism.Models.HotelReservations;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.Message;
-import com.example.android.travelandtourism.Models.UserModel;
+
 import com.example.android.travelandtourism.R;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 
 
@@ -289,27 +277,28 @@ public class BookRoomActivity extends AppCompatActivity implements
                 }
                 else
                 {
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
 
-                    Toast.makeText(getApplicationContext(),"You must login to do reserve...", Toast.LENGTH_LONG).show();
 
                 }
             }
             else if(resultCompare == "start is after end")
                 {
-                    Toast.makeText(getApplicationContext(),"check-in can not be after check-out..", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorCheckInAfterCheckOut), Toast.LENGTH_LONG).show();
+
                 }
                 else if(resultCompare == "start is equal to end")
                 {
-                    Toast.makeText(getApplicationContext(),"check-in and check-out cant be in the same day..", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorCheckInSameCheckOut), Toast.LENGTH_LONG).show();
                 }
             else
                 {
-                    Toast.makeText(getApplicationContext(),"Something weird happened...", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                 }
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Please File All the Failed..", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
         }
     }
     public Cursor getUsers() {

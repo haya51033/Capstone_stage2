@@ -107,7 +107,7 @@
         android:textColor="#000"
         android:textSize="14dp"
         android:textStyle="bold"
-        android:layout_gravity="right"
+        android:layout_gravity="end"
         android:background="#607D8B"
         android:padding="10dp"
         android:layout_margin="10dp"

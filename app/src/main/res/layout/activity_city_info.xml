@@ -71,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="22dp"
             android:background="@color/button_background"
-            android:text="View Hotels"
+            android:text="@string/ViewHotels"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"

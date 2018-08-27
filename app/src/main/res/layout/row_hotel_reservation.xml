@@ -32,9 +32,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="3.3"
+                android:text="@string/rateValue"
                 android:textSize="14dp"
-                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:drawableEnd="@android:drawable/ic_menu_my_calendar"
                 android:drawablePadding="5dp"
                 android:padding="15dp"
                 android:background="#7000"
@@ -64,7 +64,7 @@
                     android:textSize="16dp"
                     android:padding="15dp"
                     android:background="#EEEEEEEE"
-                    android:drawableRight="@android:drawable/ic_media_play"/>
+                    android:drawableEnd="@android:drawable/ic_media_play"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"

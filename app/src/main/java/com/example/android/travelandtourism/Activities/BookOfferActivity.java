@@ -12,7 +12,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
@@ -22,16 +21,9 @@ import android.widget.Toast;
 import com.example.android.travelandtourism.Data.DSHContract;
 import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.Models.FlightReservation;
-import com.example.android.travelandtourism.Models.HotelReservations;
 import com.example.android.travelandtourism.Models.Images;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.Message;
-import com.example.android.travelandtourism.Models.Offer;
 import com.example.android.travelandtourism.Models.OfferConfermation;
-import com.example.android.travelandtourism.Models.UserModel;
 import com.example.android.travelandtourism.R;
-
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -48,11 +40,9 @@ public class BookOfferActivity extends AppCompatActivity implements SharedPrefer
     IApi service =rB.retrofit.create(IApi.class);
 
     int offerId;
-   // UserModel thisUser;
     ProgressBar progressBar;
     OfferConfermation offer;
     int ofP =0;
-    OfferConfermation f;
 
     Cursor cur;
     private SQLiteDatabase mDb;
@@ -251,27 +241,25 @@ public class BookOfferActivity extends AppCompatActivity implements SharedPrefer
                                         startActivity(intent1);
 
                                     }
-                                    Toast.makeText(getApplicationContext(),"Book Confirmed :)", Toast.LENGTH_LONG).show();
-
-
-
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.BookConfirmed), Toast.LENGTH_LONG).show();
                                 }
                                 else
                                 {
-                                    Toast.makeText(getApplicationContext(),"ERROR: we cant receive the confirmation ...", Toast.LENGTH_SHORT).show();
+
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.cantReceivedConfirmation), Toast.LENGTH_LONG).show();
 
                                 }
                             }
                             else
                                 {
                                     // response value is null
-                                    Toast.makeText(getApplicationContext(),"ERROR: no response!!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
                                 }
                         }
                         else
                             {
                                 /// request not success//
-                                Toast.makeText(getApplicationContext(),"ERROR: request not success!!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
 
                                 Intent intent1 = new Intent(getApplicationContext(), MyOfferReservationActivity.class);
                                 intent1.putExtra(Intent.EXTRA_TEXT, 47);
@@ -285,7 +273,7 @@ public class BookOfferActivity extends AppCompatActivity implements SharedPrefer
 
                     @Override
                     public void onFailure(Call<ResponseValue> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(),"Connect Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
 
                     }
                 });
@@ -294,13 +282,13 @@ public class BookOfferActivity extends AppCompatActivity implements SharedPrefer
             }
             else
             {
-                Toast.makeText(getApplicationContext(),"No offer selected", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.noOfferSelected), Toast.LENGTH_LONG).show();
             }
         }
         else
             {
 
-                Toast.makeText(getApplicationContext(),"You Must Have Account And login To do reservation", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
 
 
             }

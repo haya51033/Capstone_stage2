@@ -12,14 +12,11 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,8 +29,7 @@ import com.example.android.travelandtourism.Models.Hotel;
 import com.example.android.travelandtourism.Models.HotelRate;
 import com.example.android.travelandtourism.Models.HotelRoom;
 import com.example.android.travelandtourism.Models.Images;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.UserModel;
+
 import com.example.android.travelandtourism.R;
 
 
@@ -66,6 +62,7 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
     String UserId;
     Cursor cur;
     private SQLiteDatabase mDb;
+    boolean loged;
 
     private static final String[] USER_COLUMNS = {
             DSHContract.UserEntry.COLUMN_USER_ID,
@@ -95,7 +92,6 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
         imagesAdapter.setImagesData(images);
         image_rv.setAdapter(imagesAdapter);
 
-        // ((GridLayoutManager)rvMovies.getLayoutManager()).scrollToPosition(positionIndex);
     }
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -121,14 +117,14 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
         Intent intent = this.getIntent();
         hotelId = intent.getIntExtra(Intent.EXTRA_TEXT,0);
 
-
         DSH_DB dbHelper = new DSH_DB(this);
         mDb = dbHelper.getWritableDatabase();
 
         cur = getUsers();
         cur.moveToLast();
 
-        UserId = cur.getString(cur.getColumnIndex("user_id"));
+        loged =   cur.moveToFirst();
+
         Call<ResponseValue> call = service.getHotel(hotelId);
         call.enqueue(new Callback<ResponseValue>() {
             @Override
@@ -187,6 +183,7 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
                             tv2.setText( hotel.getPhoneNumber());
                             tv3.setText(hotel.getEmail());
                             tv4.setText(getResources().getText(R.string.website) +hotel.getWebsite());
+                            tv5.setText(hotel.getCity().getNameEn());
 
                             tv6.setText(getResources().getText(R.string.about_hotel)+hotel.getDetailsEn());
 
@@ -251,15 +248,18 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
                             button.setOnClickListener(new View.OnClickListener() {
                                 public void onClick(View v) {
 
-                                    Intent intent = new Intent(getApplicationContext(), HotelRooms.class);
-                                    Bundle args = new Bundle();
-                                    intent.putExtra("hotelName",hotelName);
-                                    intent.putExtra("hotelNameAr",hotelNameAr);
-                                    //  args.putParcelable("RoomLIST",  Parcels.wrap(hotelRooms));
-                                    args.putSerializable("RoomLIST",testarr);
-                                    intent.putExtra("BUNDLE",args);
-                                    startActivity(intent);
-                                    // startActivity(intent1);
+                                  if(loged){
+                                      Intent intent = new Intent(getApplicationContext(), HotelRooms.class);
+                                      Bundle args = new Bundle();
+                                      intent.putExtra("hotelName",hotelName);
+                                      intent.putExtra("hotelNameAr",hotelNameAr);
+                                      args.putSerializable("RoomLIST",testarr);
+                                      intent.putExtra("BUNDLE",args);
+                                      startActivity(intent);
+                                  }
+                                  else {
+                                      Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn),Toast.LENGTH_LONG).show();
+                                  }
 
                                 }
                             });
@@ -290,23 +290,23 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"No Hotel To show..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.noHotel), Toast.LENGTH_LONG).show();
                         }
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(),"No Response....", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
                     }
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Connect Failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
 
             }
         });
@@ -317,93 +317,101 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
     public void ShowDialog()
     {
 
-        if(UserId != null)
-        {
-            final AlertDialog.Builder popDialog = new AlertDialog.Builder(this);
-            LayoutInflater inflater = getLayoutInflater();
-            View convertView = (View) inflater.inflate(R.layout.custom_rate, null);
-            popDialog.setView(convertView);
 
-            rating = (RatingBar) convertView.findViewById(R.id.RateHotel);
-            rating.setMax(4);
-            rating.setRating(1);
-            popDialog.setIcon(android.R.drawable.btn_star_big_on);
-            popDialog.setTitle("Add Rating: ");
-            // popDialog.setView(rating);
+        if(loged){
+            UserId = cur.getString(cur.getColumnIndex("user_id"));
 
-            // Button OK
-            popDialog.setPositiveButton(android.R.string.ok,
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            rateValue= rating.getProgress();
+            if(UserId != null)
+            {
+                final AlertDialog.Builder popDialog = new AlertDialog.Builder(this);
+                LayoutInflater inflater = getLayoutInflater();
+                View convertView = (View) inflater.inflate(R.layout.custom_rate, null);
+                popDialog.setView(convertView);
 
-                            if(rateValue==1)
-                                rate="Bad";
-                            if(rateValue==2)
-                                rate="Not Bad";
-                            if(rateValue==3)
-                                rate="Good";
-                            if(rateValue==4)
-                                rate="Excellent";
+                rating = (RatingBar) convertView.findViewById(R.id.RateHotel);
+                rating.setMax(4);
+                rating.setRating(1);
+                popDialog.setIcon(android.R.drawable.btn_star_big_on);
+                popDialog.setTitle("Add Rating: ");
+                // popDialog.setView(rating);
+
+                // Button OK
+                popDialog.setPositiveButton(android.R.string.ok,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                rateValue= rating.getProgress();
+
+                                if(rateValue==1)
+                                    rate="Bad";
+                                if(rateValue==2)
+                                    rate="Not Bad";
+                                if(rateValue==3)
+                                    rate="Good";
+                                if(rateValue==4)
+                                    rate="Excellent";
 
 
 
-                            Call<ResponseValue> call = service.RateHotel(UserId,hotelId,rate);
-                            call.enqueue(new Callback<ResponseValue>() {
-                                @Override
-                                public void onResponse(Call<ResponseValue> call, Response<ResponseValue> response) {
+                                Call<ResponseValue> call = service.RateHotel(UserId,hotelId,rate);
+                                call.enqueue(new Callback<ResponseValue>() {
+                                    @Override
+                                    public void onResponse(Call<ResponseValue> call, Response<ResponseValue> response) {
 
-                                    if(response.isSuccessful())
-                                    {
-                                        ResponseValue responseValue = response.body();
-                                        if(responseValue != null)
+                                        if(response.isSuccessful())
                                         {
-                                            HotelRate hotelRate = responseValue.getYourRate();
-                                            Toast.makeText(getApplicationContext(),"Thank you for rating :)", Toast.LENGTH_LONG).show();
+                                            ResponseValue responseValue = response.body();
+                                            if(responseValue != null)
+                                            {
+                                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.ThanksForRating), Toast.LENGTH_LONG).show();
 
+                                            }
+                                            else
+                                            {
+                                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
+
+                                            }
                                         }
                                         else
                                         {
-                                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                                         }
-                                    }
-                                    else
-                                    {
-                                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
 
                                     }
 
-                                }
+                                    @Override
+                                    public void onFailure(Call<ResponseValue> call, Throwable t) {
 
-                                @Override
-                                public void onFailure(Call<ResponseValue> call, Throwable t) {
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
-                                    Toast.makeText(getApplicationContext(),"3Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                    }
+                                });
 
-                                }
-                            });
+                                dialog.dismiss();
+                            }
 
-                            dialog.dismiss();
-                        }
+                        })
 
-                    })
+                        // Button Cancel
+                        .setNegativeButton(getResources().getText(R.string.cancel),
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
 
-                    // Button Cancel
-                    .setNegativeButton("Cancel",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                }
-                            });
-
-            popDialog.create();
-            popDialog.show();
+                popDialog.create();
+                popDialog.show();
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
+            }
         }
-        else
-        {
-            Toast.makeText(getApplicationContext(),"You Must login to do rate..", Toast.LENGTH_LONG).show();
+        else {
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
         }
+
 
     }
 

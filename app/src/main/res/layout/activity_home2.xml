@@ -21,9 +21,9 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:background="@android:color/white"
-        android:drawableLeft="@drawable/fly"
-        android:drawableRight="@android:drawable/ic_media_play"
-        android:paddingLeft="10dp"
+        android:drawableStart="@drawable/fly"
+        android:drawableEnd="@android:drawable/ic_media_play"
+        android:paddingStart="10dp"
         android:text="@string/flights" />
 
     <View
@@ -38,10 +38,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/Hotels"
-        android:drawableLeft="@drawable/hotelicon"
-        android:drawableRight="@android:drawable/ic_media_play"
+        android:drawableStart="@drawable/hotelicon"
+        android:drawableEnd="@android:drawable/ic_media_play"
         android:background="@android:color/white"
-        android:paddingLeft="10dp"/>
+        android:paddingStart="10dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -54,10 +54,10 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/Tourism_Offers"
-        android:drawableLeft="@drawable/blue_earth_icon"
-        android:drawableRight="@android:drawable/ic_media_play"
+        android:drawableStart="@drawable/blue_earth_icon"
+        android:drawableEnd="@android:drawable/ic_media_play"
         android:background="@android:color/white"
-        android:paddingLeft="10dp"/>
+        android:paddingStart="10dp"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

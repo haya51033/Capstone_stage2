@@ -143,7 +143,7 @@ public class ReserveRoomPriceConf extends AppCompatActivity implements SharedPre
                             tv8.setText(getResources().getText(R.string.country)+ confirmation.getRoom().getHotel().getCity().getCountries().getNameEn());
                             tv9.setText(getResources().getText(R.string.city) + confirmation.getRoom().getHotel().getCity().getNameEn());
 
-                            Toast.makeText(getApplicationContext(), " Reserve Confirm.", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.BookConfirmed), Toast.LENGTH_LONG).show();
 
 
 
@@ -206,14 +206,8 @@ public class ReserveRoomPriceConf extends AppCompatActivity implements SharedPre
                                                                     } finally
                                                                     {
                                                                         UpdateCreditCancel();
-                                                                        if(!english)
-                                                                        {
-                                                                            Toast.makeText(getApplicationContext(), "تم الغاء الحجز..", Toast.LENGTH_LONG).show();
-                                                                        }
-                                                                        else
-                                                                        {
-                                                                            Toast.makeText(getApplicationContext(), "Hotel Reservation Canceled..", Toast.LENGTH_LONG).show();
-                                                                        }
+                                                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.hotel_reservation_canceled), Toast.LENGTH_LONG).show();
+
                                                                         Intent intent = new Intent(getApplicationContext(), MyHotelReservations.class);
                                                                         startActivity(intent);
                                                                         finish();
@@ -222,24 +216,24 @@ public class ReserveRoomPriceConf extends AppCompatActivity implements SharedPre
                                                                 }
                                                                 else
                                                                 {
-                                                                    Toast.makeText(getApplicationContext(), "Failed...", Toast.LENGTH_LONG).show();
+                                                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                                                                 }
                                                             }
                                                             else
                                                             {
-                                                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                                             }
                                                         }
                                                         else
                                                         {
-                                                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                                         }
                                                     }
 
 
                                                     @Override
                                                     public void onFailure(Call<Message> call, Throwable t) {
-                                                        Toast.makeText(getApplicationContext(), "No connection", Toast.LENGTH_LONG).show();
+                                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                                     }
                                                 });
                                             }
@@ -275,13 +269,13 @@ public class ReserveRoomPriceConf extends AppCompatActivity implements SharedPre
                                     }
                                     else
                                     {
-                                        Toast.makeText(getApplicationContext(),"Some thing wrong!!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                     }
                                 }
 
                                 @Override
                                 public void onFailure(Call<ResponseValue> call, Throwable t) {
-                                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                 }// My hotel reservations
                             });
 
@@ -292,23 +286,23 @@ public class ReserveRoomPriceConf extends AppCompatActivity implements SharedPre
                         }
                         else
                             {
-                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                             }
                     }
                     else
                         {
-                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                         }
 
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 }
             }
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
             }
         });

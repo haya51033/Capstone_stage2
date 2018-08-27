@@ -6,15 +6,11 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.preference.PreferenceManager;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-import com.example.android.travelandtourism.MainActivity;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.UserModel;
+
 import com.example.android.travelandtourism.R;
 
 import java.util.Locale;

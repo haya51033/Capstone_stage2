@@ -223,7 +223,7 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
 
                                                 if(flightReservationsList.size() == 0)
                                                 {
-                                                    Toast.makeText(getApplicationContext(),"Lets Travel :D !!", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.letsTravel), Toast.LENGTH_LONG).show();
 
                                                 }
                                                 for (FlightReservation a : flightReservationsList) {
@@ -245,13 +245,13 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
                                         }
                                         else
                                         {
-                                            Toast.makeText(getApplicationContext(),"Some thing wrong!!", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                         }
                                     }
 
                                     @Override
                                     public void onFailure(Call<ResponseValue> call, Throwable t) {
-                                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                     }
                                 });
                                 ////////////end flight reservations/////////
@@ -280,7 +280,7 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
 
                                                 if(hotelReservationsList.size() == 0)
                                                 {
-                                                    Toast.makeText(getApplicationContext(),"Lets Travel :D !!", Toast.LENGTH_LONG).show();
+                                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.letsTravel), Toast.LENGTH_LONG).show();
                                                 }
                                                 for (HotelReservations a : hotelReservationsList) {
                                                     tmp2 += a.getId() + "\t" + a.getRoom().getHotel().getCity().getNameEn() + "\t"
@@ -336,19 +336,20 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
                                         }
                                         else
                                         {
-                                            Toast.makeText(getApplicationContext(),"Some thing wrong!!", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                         }
                                     }
 
                                     @Override
                                     public void onFailure(Call<ResponseValue> call, Throwable t) {
-                                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                     }// My hotel reservations
                                 });
                             }
                             else
                             {
-                                Toast.makeText(LoginActivity.this,"Password or Username is False!! try again..", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.passwordOrUsernameIsWrong), Toast.LENGTH_LONG).show();
+
                                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(intent);
                                 finish();
@@ -356,7 +357,7 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
                         }
                         else
                         {
-                            Toast.makeText(LoginActivity.this,"Password or Username is False!! try again..", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.passwordOrUsernameIsWrong), Toast.LENGTH_LONG).show();
                             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                             finish();
@@ -371,7 +372,7 @@ public class LoginActivity extends AppCompatActivity  implements SharedPreferenc
 
                 @Override
                 public void onFailure(Call<ResponseValue> call, Throwable t) {
-                    Toast.makeText(getApplicationContext(),"No Connection", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                 }
             });
         }

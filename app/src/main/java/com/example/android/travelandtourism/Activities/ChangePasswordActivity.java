@@ -98,7 +98,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                                 if(message1.equals("PasswordChanged"))
                                 {
-                                        Toast.makeText(getApplicationContext(),"Password changed successfully!!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.PasswordChangedSuccessfully), Toast.LENGTH_LONG).show();
 
                                         UpdateUserInfo();
                                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
@@ -106,37 +106,38 @@ public class ChangePasswordActivity extends AppCompatActivity {
                                 }
                                 else
                                     {
-                                            Toast.makeText(getApplicationContext(),"Password not changed.. try again with true values", Toast.LENGTH_LONG).show();
-                                    }
+                                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.PasswordNotChange), Toast.LENGTH_LONG).show();
+                                        }
                             }
                             else
                                 {
-                                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                 }
 
                         }
                         else
                         {
 
-                                Toast.makeText(getApplicationContext(),"Password not changed.. try again with true values", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.PasswordNotChange), Toast.LENGTH_LONG).show();
+
                         }
                     }
 
                     @Override
                     public void onFailure(Call<Message> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                     }
                 });
             }
             else {
 
-                    Toast.makeText(getApplicationContext(),"New Password and Confirm Password not Matched !!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.newPasswordNotMatch), Toast.LENGTH_LONG).show();
             }
         }
         else
             {
-                    Toast.makeText(getApplicationContext(),"Please Complete All the Fields", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.errorFillAllFields), Toast.LENGTH_LONG).show();
             }
     }
     public Cursor getUsers() {

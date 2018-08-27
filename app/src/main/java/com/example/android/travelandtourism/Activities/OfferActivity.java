@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
@@ -21,6 +23,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.travelandtourism.Data.DSHContract;
+import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Interfaces.IApi;
 import com.example.android.travelandtourism.Models.Images;
 import com.example.android.travelandtourism.Models.Offer;
@@ -49,6 +53,7 @@ public class OfferActivity  extends AppCompatActivity implements SharedPreferenc
     boolean english = true;
     boolean lang;
     String languageToLoad="en";
+    Cursor cur;
 
 
     @Override
@@ -183,34 +188,63 @@ public class OfferActivity  extends AppCompatActivity implements SharedPreferenc
                     }
                     else
                         {
-                            Toast.makeText(getApplicationContext(),"no offer to show", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.noOffer), Toast.LENGTH_LONG).show();
                         }
 
                 }
                 else
                     {
-                        Toast.makeText(getApplicationContext(), "Request Error..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                     }
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Connect Failed", Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(getApplicationContext(), getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
             }
         });
 
 
     }
 
+    private static final String[] USER_COLUMNS = {
+            DSHContract.UserEntry.COLUMN_USER_ID,
+            DSHContract.UserEntry.COLUMN_User_Name,
+            DSHContract.UserEntry.COLUMN_Password,
+            DSHContract.UserEntry.COLUMN_First_Name,
+            DSHContract.UserEntry.COLUMN_Last_Name,
+            DSHContract.UserEntry.COLUMN_Credit,
+            DSHContract.UserEntry.COLUMN_Gender,
+            DSHContract.UserEntry.COLUMN_Phone,
+            DSHContract.UserEntry.COLUMN_Email,
+            DSHContract.UserEntry.COLUMN_Country,
+            DSHContract.UserEntry.COLUMN_City
+    };
+    public Cursor getUsers() {
+        cur =   getContentResolver().query(DSHContract.UserEntry.CONTENT_URI, USER_COLUMNS, null, null, null);
+        return cur;
+
+    }
     public void ReserveOffer(View view) {
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        // Create and show the dialog.
-        SomeDialog newFragment = new SomeDialog(); // add offerId
-        Intent intent = this.getIntent();
-        offerId = intent.getIntExtra(Intent.EXTRA_TEXT, 0);
-        newFragment.newInstance(offerId);
-        newFragment.show(ft, "dialog");
+        SQLiteDatabase mDb;
+        DSH_DB dbHelper = new DSH_DB(this);
+        mDb = dbHelper.getWritableDatabase();
+        cur = getUsers();
+        boolean loged = cur.moveToLast();
+
+        if(loged){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            // Create and show the dialog.
+            SomeDialog newFragment = new SomeDialog(); // add offerId
+            Intent intent = this.getIntent();
+            offerId = intent.getIntExtra(Intent.EXTRA_TEXT, 0);
+            newFragment.newInstance(offerId);
+            newFragment.show(ft, "dialog");
+        }
+        else {
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn),Toast.LENGTH_LONG).show();
+        }
+
     }
 
 

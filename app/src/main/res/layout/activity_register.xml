@@ -52,8 +52,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Flayout"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginTop="10dp"
         android:elevation="4dp"
         android:orientation="vertical"
@@ -83,7 +83,7 @@
                 android:id="@+id/tvRFN"
                 android:background="@drawable/stroke"
                 android:padding="8dp"
-                android:contentDescription="set first name"/>
+                android:contentDescription="@string/setFirstName"/>
 
 
             <TextView
@@ -104,7 +104,7 @@
                 android:padding="8dp"
                 android:background="@drawable/stroke"
                 android:id="@+id/tvRLN"
-                android:contentDescription="set last name"/>
+                android:contentDescription="@string/setLastName"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -124,7 +124,7 @@
                 android:padding="8dp"
                 android:background="@drawable/stroke"
                 android:id="@+id/tvRGender"
-                android:contentDescription="set Gender"/>
+                android:contentDescription="@string/setGender"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -144,7 +144,7 @@
                 android:background="@drawable/stroke"
                 android:padding="8dp"
                 android:id="@+id/tvREmail"
-                android:contentDescription="set e-mail"/>
+                android:contentDescription="@string/setEmail"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -164,7 +164,7 @@
                 android:background="@drawable/stroke"
                 android:ems="10"
                 android:id="@+id/tvRPhone"
-                android:contentDescription="set phone"/>
+                android:contentDescription="@string/setPhone"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -184,7 +184,7 @@
                 android:padding="8dp"
                 android:background="@drawable/stroke"
                 android:id="@+id/tvRCountry"
-                android:contentDescription="set country"/>
+                android:contentDescription="@string/setCountry"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -204,7 +204,7 @@
                 android:id="@+id/tvRCity"
                 android:padding="8dp"
                 android:background="@drawable/stroke"
-                android:contentDescription="set city"/>
+                android:contentDescription="@string/setCity"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -224,7 +224,7 @@
                 android:id="@+id/tvRUsername"
                 android:background="@drawable/stroke"
                 android:padding="8dp"
-                android:contentDescription="set username"/>
+                android:contentDescription="@string/setUsername"/>
 
             <TextView
                 android:layout_width="fill_parent"
@@ -242,7 +242,7 @@
                 android:inputType="textPersonName"
                 android:ems="10"
                 android:id="@+id/tvRPassword"
-                android:contentDescription="set password"
+                android:contentDescription="@string/setPassword"
                 android:padding="8dp"
                 android:background="@drawable/stroke"/>
 
@@ -264,7 +264,7 @@
                 android:id="@+id/tvRConfPassword"
                 android:padding="8dp"
                 android:background="@drawable/stroke"
-                android:contentDescription="set confirm password"/>
+                android:contentDescription="@string/set_confirm_password"/>
 
 
             <Button

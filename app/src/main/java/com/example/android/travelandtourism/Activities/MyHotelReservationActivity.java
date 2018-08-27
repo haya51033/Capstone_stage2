@@ -202,7 +202,8 @@ public class MyHotelReservationActivity extends AppCompatActivity implements Sha
                                         try
                                         {
                                             getContentResolver().delete(DSHContract.HotelReservationsEntry.CONTENT_URI, "reservation_number='"+reservationId+"'",null);
-                                            Toast.makeText(getApplicationContext(), "Hotel Reservation Canceled", Toast.LENGTH_LONG).show();
+                                            Toast.makeText(getApplicationContext(), getResources().getText(R.string.hotel_reservation_canceled), Toast.LENGTH_LONG).show();
+
                                             price=cost;
                                         }
                                         catch (Exception e)
@@ -220,24 +221,24 @@ public class MyHotelReservationActivity extends AppCompatActivity implements Sha
                                     }
                                     else
                                     {
-                                        Toast.makeText(getApplicationContext(), "Failed...", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                                     }
                                 }
                                 else
                                 {
-                                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                                 }
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                             }
                         }
 
 
                         @Override
                         public void onFailure(Call<Message> call, Throwable t) {
-                            Toast.makeText(getApplicationContext(), "No connection", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), getResources().getText(R.string.connectFailed), Toast.LENGTH_LONG).show();
                         }
                     });
                 }
@@ -245,7 +246,7 @@ public class MyHotelReservationActivity extends AppCompatActivity implements Sha
         }
         else
         {
-            Toast.makeText(getApplicationContext(),"Reserve not Available !!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
         }
 
  }

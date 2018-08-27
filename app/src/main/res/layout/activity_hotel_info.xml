@@ -157,34 +157,34 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="10sp"
-                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:onClick="buttonOnClickHR"/>
                 <Button
                     android:id="@+id/btnMap"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:padding="8dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:background="@drawable/circle_btn"
                     android:drawableTop="@android:drawable/ic_dialog_map"
                     android:text="@string/hotel_location"
                     android:textColor="@color/white"
                     android:textSize="11sp"
                     android:textAllCaps="false"
-                    android:layout_toRightOf="@+id/btnHotelsRoom" />
+                    android:layout_toEndOf="@+id/btnHotelsRoom" />
 
                 <Button
                     android:id="@+id/Call_btn"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:background="@drawable/circle_btn"
                     android:drawableTop="@android:drawable/sym_call_incoming"
                     android:padding="8dp"
                     android:textAllCaps="false"
                     android:text="@string/call_hotel"
                     android:textSize="11sp"
-                    android:layout_toRightOf="@+id/btnMap"
+                    android:layout_toEndOf="@+id/btnMap"
                     android:textColor="@color/white" />
                 </RelativeLayout>
 

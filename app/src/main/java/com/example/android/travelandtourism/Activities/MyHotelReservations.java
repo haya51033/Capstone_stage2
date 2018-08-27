@@ -11,21 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.travelandtourism.Adapters.MyFlightReservationAdapter;
 import com.example.android.travelandtourism.Adapters.MyHotelReservationsAdapter;
 import com.example.android.travelandtourism.Data.DSHContract;
 import com.example.android.travelandtourism.Models.HotelReservations;
-import com.example.android.travelandtourism.Models.Language;
 import com.example.android.travelandtourism.R;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 
@@ -92,7 +85,7 @@ public class MyHotelReservations extends AppCompatActivity implements MyHotelRes
 
         if(mCursor.getCount() == 0)
         {
-            Toast.makeText(getApplicationContext(),"You Have not any reservations!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), getResources().getText(R.string.youHaveNotReservations), Toast.LENGTH_LONG).show();
         }
         else
         {

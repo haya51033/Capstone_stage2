@@ -19,10 +19,7 @@ import android.widget.Toast;
 import com.example.android.travelandtourism.Data.DSHContract;
 import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.Models.Language;
-import com.example.android.travelandtourism.Models.UserModel;
 import com.example.android.travelandtourism.R;
-
 
 import java.util.Locale;
 
@@ -66,12 +63,13 @@ public class ChargeCredit extends AppCompatActivity implements SharedPreferences
         super.onCreate(savedInstanceState);
         setupSharedPreferences();
         if(english){
-            Toast.makeText(getApplicationContext(),"English Language.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.EnglishLanguage),Toast.LENGTH_LONG).show();
             languageToLoad="en";
 
         }
         else if(!english){
-            Toast.makeText(getApplicationContext(),"Arabic Language.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.ArabicLanguage),Toast.LENGTH_LONG).show();
+
              languageToLoad="ar";
         }
 
@@ -136,9 +134,8 @@ public class ChargeCredit extends AppCompatActivity implements SharedPreferences
                             {
                                 mony = Integer.valueOf(ed.getText().toString());
 
-                                    Toast.makeText(getApplicationContext(),"success charge", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),getResources().getText(R.string.success_charge), Toast.LENGTH_LONG).show();
 
-                                Toast.makeText(getApplicationContext(),"success charge", Toast.LENGTH_LONG).show();
 
                                 UpdateCredit();
                                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
@@ -147,13 +144,13 @@ public class ChargeCredit extends AppCompatActivity implements SharedPreferences
                             }
                             else
                             {
-                                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                             }
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                         }
 
@@ -161,21 +158,22 @@ public class ChargeCredit extends AppCompatActivity implements SharedPreferences
 
                     @Override
                     public void onFailure(Call<ResponseValue> call, Throwable t) {
-                        Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                     }
                 });
             }
             else
             {
-                Toast.makeText(getApplicationContext(),"Please Enter the value to charge..", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.enterValue), Toast.LENGTH_LONG).show();
 
             }
         }
 
         else
         {
-            Toast.makeText(getApplicationContext(),"Please Login to charge", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),getResources().getText(R.string.youHaveLoggedIn), Toast.LENGTH_LONG).show();
+
         }
 
     }

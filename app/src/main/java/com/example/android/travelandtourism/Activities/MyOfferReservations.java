@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.android.travelandtourism.Adapters.MyOfferReservationAdapter;
 import com.example.android.travelandtourism.Interfaces.IApi;
-import com.example.android.travelandtourism.Models.Language;
+
 import com.example.android.travelandtourism.Models.OfferConfermation;
 import com.example.android.travelandtourism.R;
 
@@ -84,32 +84,29 @@ public class MyOfferReservations extends AppCompatActivity implements
                              if(!english)
                             {
                                 TextView tvTit = (TextView)findViewById(R.id.tvTitle10);
-                                tvTit.setText("حجوزات العروض السياحية");
                             }
-
-                            final ArrayList<OfferConfermation> arrayList = new ArrayList<>();//create a list to store the objects
 
                         }
                         else
                         {
-                            Toast.makeText(getApplicationContext(),"You Have not any reservations!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), getResources().getText(R.string.youHaveNotReservations), Toast.LENGTH_LONG).show();
 
                         }
                     }
                     else
                     {
-                        Toast.makeText(getApplicationContext(),"no response ..", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.noResponse), Toast.LENGTH_LONG).show();
                     }
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),"Server down There is an Wrong, Please Try Again", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
             }
         });
 
