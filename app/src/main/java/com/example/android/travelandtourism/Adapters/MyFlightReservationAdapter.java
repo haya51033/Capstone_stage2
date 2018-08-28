@@ -95,11 +95,17 @@ public class MyFlightReservationAdapter extends RecyclerView.Adapter<MyFlightRes
 
 
     public void swapCursor(Cursor newCursor) {
-        if (mFlightReservations != null) mFlightReservations.close();
+        if (mFlightReservations != null && mFlightReservations != newCursor){
+            mFlightReservations.close();
+        }
         mFlightReservations = newCursor;
+
         if (newCursor != null) {
             this.notifyDataSetChanged();
         }
+
+
+
     }
 
 

@@ -19,8 +19,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.android.travelandtourism.Adapters.MyFlightReservationAdapter;
 import com.example.android.travelandtourism.Adapters.MyHotelReservationsAdapter;
 import com.example.android.travelandtourism.Data.DSHContract;
+import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Models.HotelReservations;
 import com.example.android.travelandtourism.R;
 import java.util.Locale;
@@ -78,6 +80,10 @@ public class MyHotelReservations extends AppCompatActivity implements MyHotelRes
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
 
         getSupportActionBar().setTitle(getResources().getString(R.string.hotel_reservation));
+
+        DSH_DB db = new DSH_DB(this);
+        myHotelReservationsAdapter = new MyHotelReservationsAdapter(this,null);
+
 
         setContentView(R.layout.activity_my_hotel_reservations);
 

@@ -33,7 +33,7 @@ public class CountryActivity extends AppCompatActivity implements CityAdapter.Ci
         SharedPreferences.OnSharedPreferenceChangeListener{
 
     ProgressBar progressBar;
-    String url = "http://dsh-tourism.somee.com";
+    String url = "http://dshaya2.somee.com/";
 
 
     RetrofitBuilder rB = new RetrofitBuilder();

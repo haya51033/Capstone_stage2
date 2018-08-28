@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.example.android.travelandtourism.Adapters.MyFlightReservationAdapter;
 import com.example.android.travelandtourism.Data.DSHContract;
+import com.example.android.travelandtourism.Data.DSH_DB;
 import com.example.android.travelandtourism.Models.FlightReservation;
 import com.example.android.travelandtourism.R;
 
@@ -81,6 +82,8 @@ public class MyFlightReservations extends AppCompatActivity implements MyFlightR
         getResources().updateConfiguration(config,getResources().getDisplayMetrics());
 
         getSupportActionBar().setTitle(getResources().getString(R.string.my_flight_reservations));
+        DSH_DB db = new DSH_DB(this);
+        myFlightReservationAdapter = new MyFlightReservationAdapter(this, null);
 
         setContentView(R.layout.activity_my_flight_reservations);
 
@@ -183,7 +186,7 @@ public class MyFlightReservations extends AppCompatActivity implements MyFlightR
                             null,
                             null,
                             null,
-                            DSHContract.FlightReservationsEntry.COLUMN_FLIGHT_DATE);
+                            DSHContract.FlightReservationsEntry.COLUMN_Destination_City);
 
                 } catch (Exception e) {
                     Log.e(TAG, "Failed to asynchronously load data.");
@@ -193,8 +196,10 @@ public class MyFlightReservations extends AppCompatActivity implements MyFlightR
             }
 
             public void deliverResult(Cursor data) {
-                mTaskData = data;
-                super.deliverResult(data);
+                if(data != null) {
+                    mTaskData = data;
+                    super.deliverResult(data);
+                }
             }
         };
 

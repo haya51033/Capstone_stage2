@@ -59,10 +59,20 @@
             android:label="@string/bookRoom" />
         <activity
             android:name=".Activities.MyHotelReservations"
-            android:label="@string/hotel_reservation" />
+            android:label="@string/hotel_reservation"
+            android:parentActivityName=".Activities.MyTripsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.MyTripsActivity" />
+        </activity>
         <activity
             android:name=".Activities.MyHotelReservationActivity"
-            android:label="@string/hotel_reservation" />
+            android:label="@string/hotel_reservation"
+            android:parentActivityName=".Activities.MyTripsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.MyTripsActivity" />
+        </activity>
         <activity
             android:name=".Activities.SearchFligtsActivity"
             android:label="@string/Flights" />
@@ -74,10 +84,20 @@
             android:label="@string/BookFlight" />
         <activity
             android:name=".Activities.MyFlightReservationActivity"
-            android:label="@string/myFlightReservations" />
+            android:label="@string/myFlightReservations"
+            android:parentActivityName=".Activities.MyTripsActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.android.travelandtourism.Activities.MyTripsActivity" />
+        </activity>
         <activity
             android:name=".Activities.MyFlightReservations"
-            android:label="@string/myFlightReservations" />
+            android:label="@string/myFlightReservations"
+            android:parentActivityName=".Activities.MyTripsActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.travelandtourism.Activities.MyTripsActivity" />
+        </activity>
         <activity
             android:name=".Activities.HomeActivity"
             android:label="@string/home"

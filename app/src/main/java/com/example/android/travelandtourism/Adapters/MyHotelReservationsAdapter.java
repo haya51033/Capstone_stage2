@@ -86,8 +86,11 @@ public class MyHotelReservationsAdapter extends RecyclerView.Adapter<MyHotelRese
 
 
     public void swapCursor(Cursor newCursor) {
-        if (mHotelReservations != null) mHotelReservations.close();
+        if (mHotelReservations != null && mHotelReservations != newCursor){
+            mHotelReservations.close();
+        }
         mHotelReservations = newCursor;
+
         if (newCursor != null) {
             this.notifyDataSetChanged();
         }
