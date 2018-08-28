@@ -22,7 +22,7 @@ public class CityAdapter extends
     private Context context;
     private ArrayList<City> mCities;
     private CityOnClickHandler mCityOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public CityAdapter(CityOnClickHandler cityOnClickHandler) {
         mCityOnClickHandler = cityOnClickHandler;

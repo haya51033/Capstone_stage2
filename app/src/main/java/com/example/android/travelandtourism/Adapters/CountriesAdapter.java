@@ -20,7 +20,7 @@ public class CountriesAdapter extends
     private Context context;
     private ArrayList<Countries> mCountries;
     private CountryOnClickHandler mCountryOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public CountriesAdapter(CountryOnClickHandler countryOnClickHandler) {
         mCountryOnClickHandler = countryOnClickHandler;

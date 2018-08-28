@@ -116,7 +116,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                     if(responseValue2 != null)
                     {
                         citiesList = responseValue2.getCities();
-                        if (citiesList.size() > 0)
+                        if (citiesList != null)
                         {
                             setContentView(R.layout.activity_search_offer);
 
@@ -135,6 +135,8 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                                 btn2.setText(sCity);
                                 btn2.setBackgroundColor(Color.GREEN);
                             }
+                            citiesListSpinner = new ArrayList<>();
+                            citiesListSpinner.addAll(citiesList);
                         }
                         else
                         {
@@ -144,8 +146,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
                             startActivity(intent);
                             finish();
                         }
-                        citiesListSpinner = new ArrayList<>();
-                        citiesListSpinner.addAll(citiesList);
+
                     }
                     else
                     {
@@ -167,7 +168,7 @@ public class SearchOffersActivity extends AppCompatActivity implements OfferAdap
 
             @Override
             public void onFailure(Call<ResponseValue> call, Throwable t) {
-                Toast.makeText(getApplicationContext(),getResources().getText(R.string.msg4), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
             }
         });
 

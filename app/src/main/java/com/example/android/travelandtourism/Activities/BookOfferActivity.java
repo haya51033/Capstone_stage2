@@ -34,7 +34,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class BookOfferActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     RetrofitBuilder rB = new RetrofitBuilder();
     IApi service =rB.retrofit.create(IApi.class);

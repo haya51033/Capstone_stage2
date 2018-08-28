@@ -24,7 +24,7 @@ public class HotelRoomsAdapter extends
     private Context context;
     private ArrayList<HotelRoom> mHotelRooms;
     private HotelRoomsOnClickHandler mHotelRoomsOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public HotelRoomsAdapter(HotelRoomsOnClickHandler hotelRoomsOnClickHandler) {
         mHotelRoomsOnClickHandler = hotelRoomsOnClickHandler;

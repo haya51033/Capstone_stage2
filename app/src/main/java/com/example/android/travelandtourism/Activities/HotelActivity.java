@@ -63,6 +63,7 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
     Cursor cur;
     private SQLiteDatabase mDb;
     boolean loged;
+    boolean isLoged1 = false;
 
     private static final String[] USER_COLUMNS = {
             DSHContract.UserEntry.COLUMN_USER_ID,
@@ -124,6 +125,7 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
         cur.moveToLast();
 
         loged =   cur.moveToFirst();
+        isLoged1 = loged;
 
         Call<ResponseValue> call = service.getHotel(hotelId);
         call.enqueue(new Callback<ResponseValue>() {
@@ -248,7 +250,7 @@ public class HotelActivity extends AppCompatActivity implements ImagesAdapter.Im
                             button.setOnClickListener(new View.OnClickListener() {
                                 public void onClick(View v) {
 
-                                  if(loged){
+                                  if(isLoged1){
                                       Intent intent = new Intent(getApplicationContext(), HotelRooms.class);
                                       Bundle args = new Bundle();
                                       intent.putExtra("hotelName",hotelName);

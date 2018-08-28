@@ -23,7 +23,7 @@ public class FlightsAdapter extends
     private Context context;
     private ArrayList<Flight> mFlights;
     private FlightOnClickHandler mFlightOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public FlightsAdapter(FlightOnClickHandler flightOnClickHandler) {
         mFlightOnClickHandler = flightOnClickHandler;

@@ -25,7 +25,7 @@ public class MyOfferReservationAdapter extends
     private Context context;
     private ArrayList<OfferConfermation> mOfferReservations;
     private MyOfferReservationOnClickHandler myOfferReservationsOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public MyOfferReservationAdapter(MyOfferReservationOnClickHandler myOfferReservationOnClickHandler) {
         myOfferReservationsOnClickHandler = myOfferReservationOnClickHandler;

@@ -35,7 +35,7 @@ public class MyOfferReservationActivity extends AppCompatActivity implements Sha
     Intent intent;
     int reservationId;
     ProgressBar progressBar;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
     OfferConfermation offer;
 
     RetrofitBuilder rB = new RetrofitBuilder();

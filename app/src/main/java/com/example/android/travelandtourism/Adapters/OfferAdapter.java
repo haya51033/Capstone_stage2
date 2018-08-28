@@ -24,7 +24,7 @@ public class OfferAdapter extends
     private Context context;
     private ArrayList<Offer> mOffers;
     private OfferOnClickHandler mOfferOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public OfferAdapter(OfferOnClickHandler offerOnClickHandler) {
         mOfferOnClickHandler = offerOnClickHandler;

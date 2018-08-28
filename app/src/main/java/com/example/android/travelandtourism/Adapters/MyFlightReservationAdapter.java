@@ -28,7 +28,7 @@ public class MyFlightReservationAdapter extends RecyclerView.Adapter<MyFlightRes
     private Cursor mFlightReservations;
     private Context mContext;
     private FlightReservationOnClickHandler mFlightReservationOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
 
 

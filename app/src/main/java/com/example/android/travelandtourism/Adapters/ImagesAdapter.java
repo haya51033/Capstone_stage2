@@ -18,7 +18,7 @@ public class ImagesAdapter extends
     private Context context;
     private ArrayList<Images> mImages;
     private ImageOnClickHandler mImgOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
     public ImagesAdapter(ImageOnClickHandler imgOnClickHandler) {
         mImgOnClickHandler = imgOnClickHandler;

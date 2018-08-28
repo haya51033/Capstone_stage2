@@ -22,7 +22,7 @@ public class MyHotelReservationsAdapter extends RecyclerView.Adapter<MyHotelRese
     private Cursor mHotelReservations;
     private Context mContext;
     private HotelReservationOnClickHandler mHotelReservationOnClickHandler;
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
 
 
 

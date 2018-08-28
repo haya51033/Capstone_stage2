@@ -7,7 +7,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitBuilder {
-    public static final String BASE_URL = "http://dshaya.somee.com/api/";
+    public static final String BASE_URL = "http://dshaya2.somee.com/api/";
 
 
     Gson gson = new GsonBuilder()

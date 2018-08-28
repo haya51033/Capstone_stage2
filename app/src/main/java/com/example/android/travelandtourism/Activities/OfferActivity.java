@@ -42,7 +42,7 @@ import retrofit2.Response;
 
 
 public class OfferActivity  extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener{
-    String url = "http://dshaya.somee.com";
+    String url = "http://dshaya2.somee.com";
     ProgressBar progressBar;
     Button reserbBtn;
     int offerId;

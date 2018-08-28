@@ -128,31 +128,32 @@ public class SearchFligtsActivity extends AppCompatActivity implements
             public void onResponse(Call<ResponseValue> call, Response<ResponseValue> response) {
                 Log.e("Response", "get all the cities");
                 ResponseValue responseValue2 = response.body();
-                if(responseValue2 != null)
-                {
+                if (responseValue2 != null) {
                     citiesList = responseValue2.getCities();
+                    if (citiesList != null) {
+
                     setContentView(R.layout.activity_search_flights);
 
-                    et= (EditText)findViewById(R.id.etFromDate);
-                    btn = (Button)findViewById(R.id.btnshowDialog);
-                    btn2 = (Button)findViewById(R.id.btnshowDialogTo);
+                    et = (EditText) findViewById(R.id.etFromDate);
+                    btn = (Button) findViewById(R.id.btnshowDialog);
+                    btn2 = (Button) findViewById(R.id.btnshowDialogTo);
 
-                    tvTitle = (TextView)findViewById(R.id.tvTitle);
-                    tvFrom =(TextView)findViewById(R.id.tvFrom);
-                    tvTo =(TextView)findViewById(R.id.tvTo);
-                    tvDate =(TextView)findViewById(R.id.tvDate);
-                    btnDoReserve =(Button)findViewById(R.id.btnDoReserve);
-                    if(!fCity.equals("Select City")){
+                    tvTitle = (TextView) findViewById(R.id.tvTitle);
+                    tvFrom = (TextView) findViewById(R.id.tvFrom);
+                    tvTo = (TextView) findViewById(R.id.tvTo);
+                    tvDate = (TextView) findViewById(R.id.tvDate);
+                    btnDoReserve = (Button) findViewById(R.id.btnDoReserve);
+                    if (!fCity.equals("Select City")) {
                         btn.setText(fCity);
                         btn.setBackgroundColor(Color.GREEN);
 
                     }
 
-                    if(!sCity.equals("Select City")){
+                    if (!sCity.equals("Select City")) {
                         btn2.setText(sCity);
                         btn2.setBackgroundColor(Color.GREEN);
                     }
-                    if(!dateS.equals("")){
+                    if (!dateS.equals("")) {
                         et.setText(dateS);
                     }
 
@@ -161,18 +162,25 @@ public class SearchFligtsActivity extends AppCompatActivity implements
                         public void onClick(View view) {
                             DialogFragment newFragment = new SearchFligtsActivity.DatePickerFragment();
                             newFragment.show(getSupportFragmentManager(), "datePicker");
-                            test =1;
+                            test = 1;
                         }
                     });
+                        citiesListSpinner = new ArrayList<>();
+                        citiesListSpinner.addAll(citiesList);
                 }
+                else
+                    {
+                        Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
+
+                    }
+            }
                 else
                 {
                     ////reservations is null
                     Toast.makeText(getApplicationContext(),getResources().getText(R.string.serverDown), Toast.LENGTH_LONG).show();
 
                 }
-                citiesListSpinner = new ArrayList<>();
-                citiesListSpinner.addAll(citiesList);
+
 
             }
 
